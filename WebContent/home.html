@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 8]>
+
+<html lang="en-SG"
+      
+      xmlns:fb="http://ogp.me/ns/fb#"
+      class="ie">
+
+<![endif]-->
+
+<!--[if IE 8]>
+
+<html lang="en-SG"
+      
+      xmlns:fb="http://ogp.me/ns/fb#"
+      class="ie ie8">
+
+<![endif]-->
+
+<!--[if IE 9]>
+
+  <html lang="en-SG"
+      
+      xmlns:fb="http://ogp.me/ns/fb#"
+      class="ie ie9">
+
+<![endif]-->
+
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-SG"
+      
+      xmlns:fb="http://ogp.me/ns/fb#">
+
+<!--<![endif]-->
+
+  <head>
+    <link rel="dns-prefetch" href="//maps.googleapis.com">
+    <link rel="dns-prefetch" href="//maps.gstatic.com">
+    <link rel="dns-prefetch" href="//mts0.googleapis.com">
+    <link rel="dns-prefetch" href="//mts1.googleapis.com">
+
+    <!--[if IE]><![endif]-->
+    <meta charset="utf-8">
+
+
+    <!--[if IE 8]>
+      <link href="https://a0.muscache.com/airbnb/static/packages/common_o2.1_ie8-9e4cf5600ebae4afc0338ddcc4b5baf7.css" media="all" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if !(IE 8)]><!-->
+      <link href="https://a0.muscache.com/airbnb/static/packages/common_o2.1-f3a83f72e1aae5646f463212d86ada17.css" media="all" rel="stylesheet" type="text/css" />
+    <!--<![endif]-->
+
+    
+  <!--[if lt IE 9]>
+  <link href="https://a0.muscache.com/airbnb/static/packages/page1_ie-a28abcda7f08ab2f2802f83454756ed6.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <!--[if (gte IE 9)|!(IE)]><!-->
+  <link href="https://a0.muscache.com/airbnb/static/packages/page1-e2abcd91b7d131a5cb95e165e79314e4.css" media="screen" rel="stylesheet" type="text/css" />
+  <!--<![endif]-->
+
+    
+
+    <style>
+      
+    </style>
+
+    <meta id="csrf-param-meta-tag" name="csrf-param" content="authenticity_token"/>
+    <meta id="csrf-token-meta-tag" name="csrf-token" content=""/>
+
+    <script>
+      var sherlock_firstbyte = Number(new Date());
+      var googleMapsUrl = '//maps.googleapis.com/maps/api/js?language=en-SG&sensor=false&v=3.13&libraries=places&client=gme-airbnbinc&channel=monorail-prod';
+      var userAttributeCookies = {
+        flags_name: 'flags',
+        roles_name: 'roles',
+        flags: {"can_see_pretzel":1,"can_see_community":2,"display_assets_for_pretzel":4,"og_publish":16,"has_wishlisted":32,"update_cached":64,"revert_to_admin":128,"facebook_connected":256,"has_search":1024,"search_help_dropdown":2048,"has_dates":4096,"show_fb_prompt":8192,"lightweight_wishlist":16384,"can_send_profile_messages":32768,"just_logged_in":65536,"has_been_host":131072,"should_drop_pellet":262144,"is_active_host":1048576,"can_see_meetups":134217728,"should_drop_sift_pellet":268435456,"can_see_groups":536870912,"has_verified_phone":1073741824,"has_profile_pic":2147483648},
+        roles: {"is_admin":1,"is_aircrew":8,"is_content_manager":1048576,"is_stats_admin":16777216}
+      };
+    </script>
+
+
+    <title>Holiday Rentals, Homes, Apartments & Accommodation - Airbnb</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-5.newrelic.com","errorBeacon":"jserror.newrelic.com","licenseKey":"fc09a36731","applicationID":"2237","transactionName":"dlwMQktaWAgBEB1aXFhWEldeUEdLFwpdRQ==","queueTime":41,"applicationTime":356,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-378.min.js","extra":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwUCWUVRCgAH"};window.NREUM||(NREUM={}),__nr_require=function t(e,n,r){function o(i){if(!n[i]){var a=n[i]={exports:{}};e[i][0].call(a.exports,function(t){var n=e[i][1][t];return o(n?n:t)},a,a.exports,t,e,n,r)}return n[i].exports}for(var i=0;i<r.length;i++)o(r[i]);return o}({1:[function(t,e){function n(t,e,n){n||(n={});for(var r=i[t],o=r&&r.length||0,s=n[a]||(n[a]={}),d=0;o>d;d++)r[d].apply(s,e);return s}function r(t,e){var n=i[t]||(i[t]=[]);n.push(e)}function o(t){return delete t[a]}var i={},a="nr@context";e.exports={on:r,emit:n,clear:o}},{}],2:[function(t){function e(t,e,o,a,d){return s?s-=1:n("err",[d||new UncaughtException(t,e,o)]),"function"==typeof i?i.apply(this,r(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}var n=t("handle"),r=t(6),o=t(5),i=window.onerror,a=!1,s=0;t("loader").features.push("err"),window.onerror=e;try{throw new Error}catch(d){"stack"in d&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(4),a=!0)}o.on("fn-start",function(){a&&(s+=1)}),o.on("fn-err",function(t,e,r){a&&(this.thrown=!0,n("err",[r,(new Date).getTime()]))}),o.on("fn-end",function(){a&&!this.thrown&&s>0&&(s-=1)})},{1:5,2:4,3:3,4:6,5:1,6:14,handle:"D5DuLP",loader:"G9z0Bl"}],3:[function(t){function e(t){r.inPlace(t,["addEventListener","removeEventListener"],"-",n)}function n(t){return t[1]}var r=t(1),o=(t(3),t(2));if(e(window),"getPrototypeOf"in Object){for(var i=document;i&&!i.hasOwnProperty("addEventListener");)i=Object.getPrototypeOf(i);i&&e(i);for(var a=XMLHttpRequest.prototype;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&e(a)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&e(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=r(e,"fn-"):"function"==typeof e.handleEvent&&r.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:15,2:1,3:14}],4:[function(t){var e=(t(3),t(1)),n=t(2);e.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=e(t[0],"fn-")})},{1:15,2:1,3:14}],5:[function(t){function e(t){var e=t[0];"string"==typeof e&&(e=new Function(e)),t[0]=n(e,"fn-")}var n=(t(3),t(1)),r=t(2);n.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",e)},{1:15,2:1,3:14}],6:[function(t){function e(){n.inPlace(this,i,"fn-")}var n=t(1),r=t(2),o=window.XMLHttpRequest,i=["onload","onerror","onabort","onloadstart","onloadend","onprogress","onreadystatechange","ontimeout"];window.XMLHttpRequest=function(t){var i=new o(t);return r.emit("new-xhr",[],i),n.inPlace(i,["addEventListener","removeEventListener"],"-",function(t,e){return e}),i.addEventListener("readystatechange",e,!1),i},window.XMLHttpRequest.prototype=o.prototype},{1:15,2:1}],7:[function(t){function e(){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;p>o;o++)t.removeEventListener(u[o],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,s="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,d=e(s);if(d&&(r.rxSize=d),this.sameOrigin){var f=t.getResponseHeader("X-NewRelic-App-Data");f&&(n.cat=f.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,i("xhr",[n,r])}}}function r(t,e){var n=a(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}function o(t,e){return e}t("loader").features.push("xhr");var i=t("handle"),a=t(1),s=t(5),d=t(6),u=["load","error","abort","timeout"],p=u.length,f=t(2);t(3),t(4),d.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),s.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),d.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),d.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var a=e(o);a&&(r.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){}};for(var s=0;p>s;s++)n.addEventListener(u[s],this.listener,!1)}),d.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),d.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],e)}),d.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],e)}),d.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),d.on("fn-end",function(t,e){this.xhrCbStart&&d.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&e()},{1:8,2:11,3:3,4:6,5:15,6:1,handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e){var n=r[t];return n?n.apply(this,e):(o[t]||(o[t]=[]),void o[t].push(e))}var r={},o={};e.exports=n,n.queues=o,n.handlers=r},{}],11:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=c.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID){c.proto="https"===f.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=d.createElement("script");e.src=c.proto+t.agent,d.body.appendChild(e)}}function r(){"complete"===d.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,d=s.document,u="addEventListener",p="attachEvent",f=(""+location).split("?")[0],c=e.exports={offset:i(),origin:f,features:[]};d[u]?(d[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(d[p]("onreadystatechange",r),s[p]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],14:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],15:[function(t,e){function n(t,e,n,r){function nrWrapper(){try{var a,s=i(arguments),d=this,u=n&&n(s,d)||{};o.emit(e+"start",[s,d,r],u)}catch(p){}try{return a=t.apply(d,s)}catch(f){try{o.emit(e+"err",[s,d,f],u)}catch(p){}throw f}finally{try{o.emit(e+"end",[s,d,a],u)}catch(p){}}}return t&&"function"==typeof t&&t.apply&&!t._wrapped?(e||(e=""),nrWrapper._wrapped=!0,nrWrapper):t}function r(t,e,r,o){r||(r="");var i,a,s,d="-"===r.charAt(0);for(s=0;s<e.length;s++)a=e[s],i=t[a],i&&"function"==typeof i&&i.apply&&!i._wrapped&&(t[a]=n(i,d?a+r:r,o,a,t))}var o=t(1),i=t(2);e.exports=n,n.inPlace=r},{1:1,2:14}]},{},["G9z0Bl",2,7]);</script>
+
+      <link rel="canonical" href="https://www.airbnb.com.sg/">
+          <link rel="alternate" href="https://www.airbnb.com/" hreflang="en">
+          <link rel="alternate" href="https://www.airbnb.co.uk/" hreflang="en-GB">
+          <link rel="alternate" href="https://www.airbnb.com.sg/" hreflang="en-SG">
+          <link rel="alternate" href="https://www.airbnb.com.au/" hreflang="en-AU">
+          <link rel="alternate" href="https://www.airbnb.co.nz/" hreflang="en-NZ">
+          <link rel="alternate" href="https://www.airbnb.ca/" hreflang="en-CA">
+          <link rel="alternate" href="https://www.airbnb.ie/" hreflang="en-IE">
+
+      <link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.airbnb.com.sg/">
+      <link rel="alternate" href="android-app://com.airbnb.android/airbnb">
+
+      <meta name="description" content="Discover amazing, unique accommodations in 192 countries. With more than 10 million nights booked worldwide, Airbnb is the world leader in travel rentals.">
+
+
+
+
+      <meta property="fb:app_id" content="138566025676">
+      <meta property="og:site_name" content="Airbnb">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="https://www.airbnb.com.sg/">
+      <meta property="og:title" content="Holiday Rentals, Homes, Apartments &amp; Accommodation - Airbnb">
+      <meta property="og:description" content="Discover amazing, unique accommodations in 192 countries. With more than 10 million nights booked worldwide, Airbnb is the world leader in travel rentals.">
+      <meta property="og:image" content="https://a0.muscache.com/airbnb/static/logos/200x200-2bfa74c5a3542a898901cdee9638a6ee.png">
+
+      <meta name="twitter:url" content="https://www.airbnb.com.sg/">
+      <meta name="twitter:description" content="Discover amazing, unique accommodations in 192 countries. With more than 10 million nights booked worldwide, Airbnb is the world leader in travel rentals.">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Holiday Rentals, Homes, Apartments &amp; Accommodation - Airbnb">
+      <meta name="twitter:site" content="@airbnb_sg">
+      <meta name="twitter:app:name:iphone" content="Airbnb">
+      <meta name="twitter:app:name:ipad" content="Airbnb">
+      <meta name="twitter:app:name:googleplay" content="Airbnb">
+      <meta name="twitter:app:id:iphone" content="401626263">
+      <meta name="twitter:app:id:ipad" content="401626263">
+      <meta name="twitter:app:id:googleplay" content="com.airbnb.android">
+      <meta name="twitter:app:url:iphone" content="airbnb://">
+      <meta name="twitter:app:url:ipad" content="airbnb://">
+      <meta name="twitter:app:url:googleplay" content="airbnb://">
+
+    <meta name="viewport" content="width=1000,maximum-scale=1.0">
+    <link rel="image_src" href="https://a0.muscache.com/airbnb/static/airbnb_logo-0887e76cd6fd403d016dd652455acbb6.png">
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Airbnb">
+
+    <!--[if lt IE 9]>
+      <script src="https://a0.muscache.com/airbnb/static/vendor/html5shiv-69a2aa52c3c22c05685997eb91ac7036.js" type="text/javascript"></script>
+    <![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="https://a0.muscache.com/airbnb/static/logotype_favicon-2e5a2c7c6a64c00b95ed01dec8b85f57.ico">
+  </head>
+  <body class=" ">
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-46MK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-46MK');</script>
+
+
+
+    <div id="header" class="navbar navbar-top">
+  <div class="navbar-inner">
+    <div class="container container-full-width page-container">
+      <a href="/" class="brand airbnb">Airbnb</a>
+      <ul class="nav">
+      </ul>
+
+      <ul class="nav pull-right help-menu" style="margin-left:0;">
+        <li class="dropdown" data-dropdown-sticky="true">
+          <a id="help_dropdown" class="dropdown-toggle help-toggle" href="javascript:void(0)"> Help <b class="caret"></b></a>
+          <div class="dropdown-menu help-dropdown dropdown-bordered">
+            <div class="nav-header">
+              <a href="/help?ref=help-dropdown" class="help-center-link">Visit the Help Centre &#187;</a>
+            </div>
+            <ul class="unstyled list-unstyled">
+              <li class="loading"></li>
+              <li class="hidden">
+                <a href="/safety?ref=help-dropdown" class="">Visit our Trust & Safety Centre</a>
+              </li>
+              <li class="all_faqs hidden">
+                <a href="/help/topic/hosting?ref=help-dropdown">See all FAQs</a>
+              </li>
+              <li id="faqadmin" style="display: none;">
+                <input type="hidden" name="faq_link[page]" value="homepages-show">
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="list-your-space">
+          <a id="list-your-space" class="yellow btn btn-special" href="/rooms/new">List Your Space</a>
+        </li>
+      </ul>
+
+      <ul class="nav pull-right logged-out">
+        <li id="sign_up"><a data-signup-modal href="/signup_login?redirect_params[action]=show&amp;redirect_params[controller]=homepages">Sign Up</a></li>
+        <li id="login"><a data-login-modal href="/login?redirect_params[action]=show&amp;redirect_params[controller]=homepages">Log In</a></li>
+      </ul>
+
+      <ul class="nav pull-right logged-in">
+        <li class="dropdown user-item">
+          <a class="dropdown-toggle" href="javascript:void(0)">
+            <div class="mini-media-box media-photo user-profile-image"></div>
+            <span class="value_name">User</span> <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu dropdown-bordered header-dropdown">
+            <li><a href="/home/dashboard">Dashboard</a></li>
+            <li class="listings">
+              <a href="/rooms">
+                <span class="singular" style="display: none;">Your Listing</span>
+                <span class="plural">Your Listings</span>
+              </a>
+            </li>
+            <li class="reservations" style="display: none;">
+              <a href="/my_listings">Your Reservations</a>
+            </li>
+            <li><a href="/trips/upcoming">Your Trips</a></li>
+            <li><a href="/wishlists/my" id="wishlists">Wish Lists</a></li>
+            <li class="groups">
+              <a href="/groups">Groups</a>
+            </li>
+            <li>
+              <a href="/invite?r=3">
+                Invite Friends
+                <span class="label label-pink label-new">New</span>
+              </a>
+            </li>
+            <li><a href="/users/edit">Edit Profile</a></li>
+            <li><a href="/account">Account</a></li>
+            <li><a href="/logout" id="header-logout">Log Out</a></li>
+          </ul>
+        </li>
+        <li class="divider-vertical"></li>
+        <li id="inbox-item">
+          <a href="/inbox"><i class="icon icon-mail hide-text"><span class="text-hide">Inbox</span></i><i class="alert-count position-super fade">0</i></a>
+        </li>
+        <li class="divider-vertical"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+    <script src="https://a0.muscache.com/airbnb/static/header_cookie-4cab6c6b62a4a9f229794635e763c468.js" type="text/javascript"></script>
+
+    <script>new HeaderPreload();</script>
+
+      <div class='span12 flash-container'>
+      </div>
+
+    
+
+
+<div id="hero" style="display:block;" 
+     data-native-currency="SGD">
+  <ul class="list-unstyled" id="slideshow">
+      <li
+          class="active"
+
+          style="background-image: url(https://a2.muscache.com/airbnb/p1_hero/553285-hero-cd58b688037256163e76992dda4dd03e.jpg)"
+
+        data-image-url="https://a2.muscache.com/airbnb/p1_hero/553285-hero-cd58b688037256163e76992dda4dd03e.jpg"
+        data-bg-opacity="1"
+      >
+        <div class="caption">
+          <p>
+            <strong><a href="/rooms/553285">Milan, Italy</a></strong>
+            &ndash;
+            <span class="price" data-price="369.0492522979833">
+              <a href="/rooms/553285">$479 SGD</a>
+            </span>
+          </p>
+        </div>
+      </li>
+      <li
+
+        data-image-url="https://a2.muscache.com/airbnb/p1_hero/272282-hero-eadd51ffd8f3427f54db12815052e31a.jpg"
+        data-bg-opacity="1"
+      >
+        <div class="caption">
+          <p>
+            <strong><a href="/rooms/272282">Barcelona, Spain</a></strong>
+            &ndash;
+            <span class="price" data-price="342.9825764851146">
+              <a href="/rooms/272282">$445 SGD</a>
+            </span>
+          </p>
+        </div>
+      </li>
+      <li
+
+        data-image-url="https://a2.muscache.com/airbnb/p1_hero/1838774-hero-a178cf1e8873f877d78f0cc53fc98888.jpg"
+        data-bg-opacity="1"
+      >
+        <div class="caption">
+          <p>
+            <strong><a href="/rooms/1838774">Daan District, Taiwan</a></strong>
+            &ndash;
+            <span class="price" data-price="60.0">
+              <a href="/rooms/1838774">$78 SGD</a>
+            </span>
+          </p>
+        </div>
+      </li>
+  </ul>
+
+  <div class="search-area">
+    <div class="page-container page-container-fixed">
+      <div class="row">
+        <div class="col-11">
+          <div id="blob-bg" style="opacity: 1"></div>
+          <h1 class='text-special'>Find a place to stay.</h1>
+          <h2>Rent from people in over 34,000 cities and 192 countries.</h2>
+
+          <form action="/s" id="search_form" class="custom show-search-options position-left form-inline">
+            <div class="input-wrapper">
+              <input type="text" class="location input-large input-contrast" autocomplete="off" id="location" name="location" placeholder="Where do you want to go?" />
+              <p id="enter_location_error_message" class="bad" style="display:none;">
+                Please set location
+              </p>
+            </div>
+
+            <div id="checkinWrapper" class="input-wrapper">
+              <input type="text" id="checkin" class="checkin search-option input-large input-contrast" name="checkin" placeholder="Check in" />
+              <span class="search-area-icon"></span>
+            </div>
+            <div id="checkoutWrapper" class="input-wrapper">
+              <input type="text" id="checkout" class="checkout search-option input-large input-contrast" name="checkout" placeholder="Check out" />
+              <span class="search-area-icon search-area-icon-checkout"></span>
+            </div>
+
+            <div class="input-wrapper">
+              <div class="custom-select-container">
+                <select id="guests" name="guests" class="search-option small">
+                  <option value="1">1 Guest</option>
+<option value="2">2 Guests</option>
+<option value="3">3 Guests</option>
+<option value="4">4 Guests</option>
+<option value="5">5 Guests</option>
+<option value="6">6 Guests</option>
+<option value="7">7 Guests</option>
+<option value="8">8 Guests</option>
+<option value="9">9 Guests</option>
+<option value="10">10 Guests</option>
+<option value="11">11 Guests</option>
+<option value="12">12 Guests</option>
+<option value="13">13 Guests</option>
+<option value="14">14 Guests</option>
+<option value="15">15 Guests</option>
+<option value="16">16+ Guests</option>
+                </select>
+
+                <div class="btn btn-large dropdown-toggle input-contrast" aria-hidden="true">
+                  <span class="value language current">
+                    1 Guest
+                  </span>
+                  <i class="icon icon-caret-down icon-gray"></i>
+                </div>
+              </div>
+            </div>
+
+            <input type="hidden" name="source" value="bb">
+
+            <button type="submit" class="btn btn-primary btn-large btn-contrast" id="submit_location">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="slideshow-scroll slideshow-scroll-prev faded-out show-desktop">
+    <i class="icon icon-chevron-left"></i>
+  </a>
+  <a href="#" class="slideshow-scroll slideshow-scroll-next faded-out show-desktop">
+    <i class="icon icon-chevron-right"></i>
+  </a>
+</div>
+
+
+
+<div class="zebra-striping">
+    <div class="homepage-module">
+    <div class="page-container">
+      <div class="row row-space-top-8 text-center">
+        <h1 class="text-special">
+          Welcome to Airbnb!
+        </h1>
+      </div>
+      <div class="row text-center">
+        <p class="text-lead">
+          Rent unique, local accommodations on any budget, anywhere in the world on Airbnb.
+        </p>
+      </div>
+
+      <div class="row">
+  <div class="col-10 col-push-1">
+    <ul class="supporting-points row row-space-top-2 list-unstyled">
+      <li class="col-4 supporting-point explore">
+        <a href="/how-it-works" class="icon"></a>
+        <div class="point-text">
+          <h3 class="text-special">
+            Explore
+          </h3>
+          <p>
+            Find the perfect place.
+          </p>
+        </div>
+      </li>
+
+      <li class="col-4 supporting-point contact">
+        <a href="/how-it-works" class="icon"></a>
+        <div class="point-text">
+          <h3 class="text-special">
+            Contact
+          </h3>
+          <p>
+            Message hosts.
+          </p>
+        </div>
+      </li>
+
+      <li class="col-4 supporting-point book">
+        <a href="/how-it-works" class="icon"></a>
+        <div class="point-text">
+          <h3 class="text-special">
+            Book
+          </h3>
+          <p>
+            View your itinerary.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+      <div class="row-space-top-3 row-space-8 text-center">
+        <a href="/how-it-works" class="h4">
+          How Airbnb works &raquo;
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <div class="homepage-module">
+    <div class="page-container">
+
+      <div class="row row-space-top-8 text-center">
+        <h1 class="text-special">
+          Top Destinations
+        </h1>
+      </div>
+
+      <div class="row text-center row-space-4">
+        <p class="text-lead">
+            Favourite places for people travelling from Singapore.
+        </p>
+      </div>
+
+      <div class="row row-space-8">
+        <div class="col-6">
+          <ul class="city-tiles city-tiles-big list-unstyled">
+            <li>
+              <div class="media-photo city-tile-big city-tile">
+                <img alt="Pixel-258c0301c93c84bbf77bcef5fccab62c" class="lazy" data-original="https://a0.muscache.com/airbnb/static/landing_pages/destinations/seoul-hero-e3377e0f2c96e11c97b455217c066dae.jpg" height="300" src="https://a0.muscache.com/airbnb/static/landing_pages/trust/pixel-258c0301c93c84bbf77bcef5fccab62c.jpg" width="485" />
+              </div>
+              <a href="/s/Seoul--South-Korea?ref=top-destinations" class="block-link">
+                <h4 class='text-special'>
+                  Seoul
+                </h4>
+
+</a>            </li>
+          </ul>
+
+          <div class="row-space-top-3">
+              <div class="col-4">
+                <h4>Asia Pacific</h4>
+                <ul class="list-unstyled">
+                    <li><a href="/s/Bali--Indonesia?ref=top-destinations" class="block-link">
+                      Bali</a>
+                    </li>
+                    <li><a href="/s/Bangkok--Thailand?ref=top-destinations" class="block-link">
+                      Bangkok</a>
+                    </li>
+                    <li><a href="/s/Beijing--China?ref=top-destinations" class="block-link">
+                      Beijing</a>
+                    </li>
+                    <li><a href="/s/Shanghai--China?ref=top-destinations" class="block-link">
+                      Shanghai</a>
+                    </li>
+                    <li><a href="/s/Tokyo--Japan?ref=top-destinations" class="block-link">
+                      Tokyo</a>
+                    </li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <h4>North America</h4>
+                <ul class="list-unstyled">
+                    <li><a href="/s/Boston--MA?ref=top-destinations" class="block-link">
+                      Boston</a>
+                    </li>
+                    <li><a href="/s/Chicago--IL?ref=top-destinations" class="block-link">
+                      Chicago</a>
+                    </li>
+                    <li><a href="/s/Los-Angeles--CA?ref=top-destinations" class="block-link">
+                      Los Angeles</a>
+                    </li>
+                    <li><a href="/s/San-Francisco--CA?ref=top-destinations" class="block-link">
+                      San Francisco</a>
+                    </li>
+                    <li><a href="/s/Washington--DC?ref=top-destinations" class="block-link">
+                      Washington</a>
+                    </li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <h4>Europe</h4>
+                <ul class="list-unstyled">
+                    <li><a href="/s/Amsterdam--Netherlands?ref=top-destinations" class="block-link">
+                      Amsterdam</a>
+                    </li>
+                    <li><a href="/s/Barcelona--Spain?ref=top-destinations" class="block-link">
+                      Barcelona</a>
+                    </li>
+                    <li><a href="/s/Berlin--Germany?ref=top-destinations" class="block-link">
+                      Berlin</a>
+                    </li>
+                    <li><a href="/s/Florence--Italy?ref=top-destinations" class="block-link">
+                      Florence</a>
+                    </li>
+                    <li><a href="/s/Rome--Italy?ref=top-destinations" class="block-link">
+                      Rome</a>
+                    </li>
+                </ul>
+              </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <ul class="city-tiles city-tiles-mini list-unstyled">
+              <li>
+                <div class="media-photo city-tile-mini city-tile">
+                  <img alt="Pixel-258c0301c93c84bbf77bcef5fccab62c" class="lazy" data-original="https://a0.muscache.com/airbnb/static/landing_pages/destinations/singapore-7c531092c8ba56e1b4816395b4690853.jpg" height="140" src="https://a0.muscache.com/airbnb/static/landing_pages/trust/pixel-258c0301c93c84bbf77bcef5fccab62c.jpg" width="230" />
+                </div>
+                <a href="/s/Singapore?ref=top-destinations">
+                  <h4 class='text-special'>
+                    Singapore
+                  </h4>
+
+</a>              </li>
+              <li>
+                <div class="media-photo city-tile-mini city-tile">
+                  <img alt="Pixel-258c0301c93c84bbf77bcef5fccab62c" class="lazy" data-original="https://a0.muscache.com/airbnb/static/landing_pages/destinations/hongkong-23c7f6480da887070f76321e803896f6.jpg" height="140" src="https://a0.muscache.com/airbnb/static/landing_pages/trust/pixel-258c0301c93c84bbf77bcef5fccab62c.jpg" width="230" />
+                </div>
+                <a href="/s/Hong-Kong?ref=top-destinations">
+                  <h4 class='text-special'>
+                    Hong Kong
+                  </h4>
+
+</a>              </li>
+              <li>
+                <div class="media-photo city-tile-mini city-tile">
+                  <img alt="Pixel-258c0301c93c84bbf77bcef5fccab62c" class="lazy" data-original="https://a0.muscache.com/airbnb/static/landing_pages/destinations/paris-7e637e192198599f5bd048e238e666c0.jpg" height="140" src="https://a0.muscache.com/airbnb/static/landing_pages/trust/pixel-258c0301c93c84bbf77bcef5fccab62c.jpg" width="230" />
+                </div>
+                <a href="/s/Paris--France?ref=top-destinations">
+                  <h4 class='text-special'>
+                    Paris
+                  </h4>
+
+</a>              </li>
+              <li>
+                <div class="media-photo city-tile-mini city-tile">
+                  <img alt="Pixel-258c0301c93c84bbf77bcef5fccab62c" class="lazy" data-original="https://a0.muscache.com/airbnb/static/landing_pages/destinations/london-c85366397f37807af72716076f7ae02e.jpg" height="140" src="https://a0.muscache.com/airbnb/static/landing_pages/trust/pixel-258c0301c93c84bbf77bcef5fccab62c.jpg" width="230" />
+                </div>
+                <a href="/s/London--United-Kingdom?ref=top-destinations">
+                  <h4 class='text-special'>
+                    London
+                  </h4>
+
+</a>              </li>
+              <li>
+                <div class="media-photo city-tile-mini city-tile">
+                  <img alt="Pixel-258c0301c93c84bbf77bcef5fccab62c" class="lazy" data-original="https://a0.muscache.com/airbnb/static/landing_pages/destinations/taipei-35a17dbd06b1ac79f2dc14e80a491459.jpg" height="140" src="https://a0.muscache.com/airbnb/static/landing_pages/trust/pixel-258c0301c93c84bbf77bcef5fccab62c.jpg" width="230" />
+                </div>
+                <a href="/s/Taipei--Taiwan?ref=top-destinations">
+                  <h4 class='text-special'>
+                    Taipei
+                  </h4>
+
+</a>              </li>
+              <li>
+                <div class="media-photo city-tile-mini city-tile">
+                  <img alt="Pixel-258c0301c93c84bbf77bcef5fccab62c" class="lazy" data-original="https://a0.muscache.com/airbnb/static/landing_pages/destinations/newyork-fc437c5071282be910954f2ef5ff6a65.jpg" height="140" src="https://a0.muscache.com/airbnb/static/landing_pages/trust/pixel-258c0301c93c84bbf77bcef5fccab62c.jpg" width="230" />
+                </div>
+                <a href="/s/New-York--NY?ref=top-destinations">
+                  <h4 class='text-special'>
+                    New York
+                  </h4>
+
+</a>              </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="homepage-module">
+  <div class="page-container">
+    <div class="row row-space-top-8 text-center">
+      <h1 class="text-special">
+        We &hearts; Airbnb
+      </h1>
+    </div>
+
+    <div class="row text-center">
+      <p class="text-lead">
+        Exploring the world, one trip at a time.
+      </p>
+    </div>
+
+    <div class="row row-space-top-4 row-space-8">
+        <div class="col-4 text-center">
+          <a href="/rooms/292420">
+            <img alt="Pixel-258c0301c93c84bbf77bcef5fccab62c" class="avatar" data-original="https://a1.muscache.com/ic/users/1733654/profile_pic/1329278937/original.jpg?interpolation=progressive-bicubic&amp;crop=w:w;*,*&amp;crop=h:h;*,*&amp;resize=225:*&amp;output-format=jpg&amp;output-quality=85" src="https://a0.muscache.com/airbnb/static/landing_pages/trust/pixel-258c0301c93c84bbf77bcef5fccab62c.jpg" />
+          </a>
+          <blockquote>
+            "I would have given 7 stars if I can! this is one of the rare opportunity for a traveller to live in the suburbs and immerse in the local community. grab it =)"
+          </blockquote>
+          <cite>Yk</cite>
+        </div>
+        <div class="col-4 text-center">
+          <a href="/rooms/482231">
+            <img alt="Pixel-258c0301c93c84bbf77bcef5fccab62c" class="avatar" data-original="https://a1.muscache.com/ic/users/9495029/profile_pic/1382152784/original.jpg?interpolation=progressive-bicubic&amp;crop=w:w;*,*&amp;crop=h:h;*,*&amp;resize=225:*&amp;output-format=jpg&amp;output-quality=85" src="https://a0.muscache.com/airbnb/static/landing_pages/trust/pixel-258c0301c93c84bbf77bcef5fccab62c.jpg" />
+          </a>
+          <blockquote>
+            "Frances and her girls were great and we felt very welcomed and warmed by their hospitality. I loved the variety of fruits offered at breakfast! We would love to come back and stay for a longer period of time."
+          </blockquote>
+          <cite>Adeline</cite>
+        </div>
+        <div class="col-4 text-center">
+          <a href="/rooms/1429889">
+            <img alt="Pixel-258c0301c93c84bbf77bcef5fccab62c" class="avatar" data-original="https://a2.muscache.com/ic/users/6438954/profile_pic/1385650886/original.jpg?interpolation=progressive-bicubic&amp;crop=w:w;*,*&amp;crop=h:h;*,*&amp;resize=225:*&amp;output-format=jpg&amp;output-quality=85" src="https://a0.muscache.com/airbnb/static/landing_pages/trust/pixel-258c0301c93c84bbf77bcef5fccab62c.jpg" />
+          </a>
+          <blockquote>
+            "Sarah was lovely and a perfect host. She organized surf lessons for us, gave us recommendations where to go out and made sure we didnt get lost ;)"
+          </blockquote>
+          <cite>Sonja</cite>
+        </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+      <div id="footer" class="row-space-top-4 container-brand-dark footer-surround footer-container">
+        <div class="container page-container">
+  <div class="row">
+    <div class="span3 col-3">
+      <h5>Location Settings</h5>
+
+      <div class="language-curr-picker clearfix">
+        <span class="language-picker"></span>
+          <span class="currency-picker"></span>
+      </div>
+      <div>
+        <ul id="asset-experiment-links" class="list-layout unstyled hide">
+          <li id="show-pretzel" class="hide">
+            <a class="btn" href="#">Show Pretzel</a>
+          </li>
+          <li id="hide-pretzel" class="hide">
+            <a class="btn" href="#">Hide Pretzel</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="span3 col-3">
+      <h5>Company</h5>
+      <ul class="unstyled list-layout">
+        <li><a href="/about/about-us">About</a></li>
+        <li><a href="/jobs">Jobs</a></li>
+        <li><a href="/press/news">Press</a></li>
+        <li><a href="http://blog.airbnb.com">Blog</a></li>
+        <li><a href="/help">Help</a></li>
+        <li><a href="/policies">Policies</a></li>
+        <li><a href="/disaster-response">Disaster Response</a></li>
+        <li><a href="/terms">Terms & Privacy</a></li>
+      </ul>
+    </div>
+
+    <div class="span3 col-3">
+      <h5>Discover</h5>
+      <ul class="unstyled list-layout">
+        <li><a href="/trust">Trust & Safety</a></li>
+        <li><a href="/invite?r=6">Invite Friends</a></li>
+        <li><a href="/wishlists/airbnb_picks">Airbnb Picks</a></li>
+        <li><a href="/mobile">Mobile</a></li>
+        <li><a href="/sitemaps">Site Map</a></li>
+      </ul>
+    </div>
+
+    <div class="span3 col-3">
+      <h5>Hosting</h5>
+      <ul class="unstyled list-layout">
+        <li><a href="/info/why_host">Why Host</a></li>
+        <li><a href="/hospitality">Hospitality</a></li>
+        <li><a href="/help/responsible-hosting">Responsible Hosting</a></li>
+        <li><a href="/stories">Stories</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="footer-container-slim container-semi-opaque">
+  <div class="container page-container">
+    <div class="row">
+      <div class="text-center span4 col-4 col-offset-4 offset4">
+        <h5>Join us lah</h5>
+        <ul class="unstyled list-unstyled list-inline">
+          <li><a href="//twitter.com/airbnb_sg" target="_blank">
+            Twitter
+          </a></li>
+          <li><a href="//www.facebook.com/AirbnbSingapore" target="_blank">
+            Facebook
+          </a></li>
+          <li><a href="https://plus.google.com/+airbnb" rel="publisher" target="_blank">
+            Google
+          </a></li>
+          <li><a href="http://www.youtube.com/airbnb" target="_blank">
+            YouTube
+          </a></li>
+        </ul>
+        <div id="copyright">
+          &copy; Airbnb, Inc.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+      <div id="fb-root"></div>
+
+    <!--[if lt IE 9]>
+      <script src="https://a0.muscache.com/airbnb/static/libs_jquery_1x-da2b7120de1fca716ec9b10839dfc882.js" type="text/javascript"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script src="https://a0.muscache.com/airbnb/static/libs_jquery_2x-ba3075998163c02622926b9556bc93aa.js" type="text/javascript"></script>
+    <!--<![endif]-->
+    <script src="https://a0.muscache.com/airbnb/static/o2.1-9e66faa1b065085ab19854caf0e470e4.js" type="text/javascript"></script>
+    <script src="https://a0.muscache.com/airbnb/static/core-248024f68a7312d4edf7db165a36dd69.js" type="text/javascript"></script>
+
+    <script>
+      I18n.init(
+        {"country":"SG","currencies":{"ARS":{"symbol":"$","code_required":true,"options":null},"AUD":{"symbol":"$","code_required":true,"options":null},"BRL":{"symbol":"R$","code_required":false,"options":{"space_between_price_and_symbol":true}},"CAD":{"symbol":"$","code_required":true,"options":null},"CHF":{"symbol":"CHF","code_required":false,"options":{"position":"after","space_between_price_and_symbol":true}},"CNY":{"symbol":"&yen;","code_required":false,"options":{"unicode_symbol":"¥"}},"CZK":{"symbol":"&#75;&#269;","code_required":false,"options":{"unicode_symbol":"Kč"}},"DKK":{"symbol":"kr","code_required":true,"options":{"position":"after","space_between_price_and_symbol":true,"explicit_currency_not_aesthetic":true}},"EUR":{"symbol":"&euro;","code_required":false,"options":{"unicode_symbol":"€","position":"special"}},"GBP":{"symbol":"&pound;","code_required":false,"options":{"unicode_symbol":"£"}},"HKD":{"symbol":"$","code_required":true,"options":null},"HUF":{"symbol":"Ft","code_required":false,"options":null},"IDR":{"symbol":"Rp","code_required":false,"options":null},"ILS":{"symbol":"&#8362;","code_required":false,"options":{"unicode_symbol":"₪","space_between_price_and_symbol":true}},"INR":{"symbol":"&#8377;","code_required":false,"options":{"unicode_symbol":"₹"}},"JPY":{"symbol":"&yen;","code_required":false,"options":{"unicode_symbol":"¥","space_between_price_and_symbol":true}},"KRW":{"symbol":"&#8361;","code_required":false,"options":{"unicode_symbol":"₩","space_between_price_and_symbol":true}},"MYR":{"symbol":"&#82;&#77;","code_required":false,"options":{"unicode_symbol":"RM"}},"MXN":{"symbol":"$","code_required":true,"options":null},"NOK":{"symbol":"kr","code_required":true,"options":{"position":"after","space_between_price_and_symbol":true,"explicit_currency_not_aesthetic":true}},"NZD":{"symbol":"$","code_required":true,"options":null},"PHP":{"symbol":"&#8369;","code_required":false,"options":{"unicode_symbol":"₱"}},"PLN":{"symbol":"z&#22;&#322;","code_required":false,"options":{"unicode_symbol":"zł"}},"RUB":{"symbol":"&#1088;","code_required":false,"options":{"unicode_symbol":"р","position":"after"}},"SEK":{"symbol":"kr","code_required":true,"options":{"position":"after","space_between_price_and_symbol":true,"explicit_currency_not_aesthetic":true}},"SGD":{"symbol":"$","code_required":true,"options":null},"THB":{"symbol":"&#3647;","code_required":false,"options":{"unicode_symbol":"฿"}},"TRY":{"symbol":"&#84;&#76;","code_required":false,"options":{"unicode_symbol":"TL","position":"after","space_between_price_and_symbol":true}},"TWD":{"symbol":"$","code_required":true,"options":null},"USD":{"symbol":"$","code_required":false,"options":null},"VND":{"symbol":"&#8363;","code_required":false,"options":{"unicode_symbol":"₫"}},"ZAR":{"symbol":"R","code_required":true,"options":null}},"current_locale_name":"English (Singapore)","languages":[{"locale_name":"Bahasa Indonesia","locale":"id"},{"locale_name":"Bahasa Melayu","locale":"ms"},{"locale_name":"Català","locale":"ca"},{"locale_name":"Dansk","locale":"da"},{"locale_name":"Deutsch","locale":"de"},{"locale_name":"English","locale":"en"},{"locale_name":"Español","locale":"es"},{"locale_name":"Eλληνικά","locale":"el"},{"locale_name":"Français","locale":"fr"},{"locale_name":"Italiano","locale":"it"},{"locale_name":"Magyar","locale":"hu"},{"locale_name":"Nederlands","locale":"nl"},{"locale_name":"Norsk","locale":"no"},{"locale_name":"Polski","locale":"pl"},{"locale_name":"Português","locale":"pt"},{"locale_name":"Suomi","locale":"fi"},{"locale_name":"Svenska","locale":"sv"},{"locale_name":"Türkçe","locale":"tr"},{"locale_name":"Íslenska","locale":"is"},{"locale_name":"Čeština","locale":"cs"},{"locale_name":"Русский","locale":"ru"},{"locale_name":"ภาษาไทย","locale":"th"},{"locale_name":"中文 (简体)","locale":"zh"},{"locale_name":"中文 (繁體)","locale":"zh-TW"},{"locale_name":"日本語","locale":"ja"},{"locale_name":"한국어","locale":"ko"}]}
+      );
+      I18n.extend({"Password":"Password","users.Confirm_Password_to_Continue":"Confirm Password to Continue","users.Confirm_Password":"Confirm Password","users.Cancel":"Cancel","users.Please_enter_your_Airbnb_password_to_continue.":"For your security, please enter your Airbnb password to continue.","user.signup.forgot_password":"Forgot password?","users.Confirm_Facebook_Password":"Confirm Facebook Password","choose_language":"Choose language","choose_currency":"Choose currency","clear_dates":"Clear Dates"});
+    </script>
+
+
+    <script>
+  (function(c,a){window.mixpanel=a;var b,d,h,e;
+  a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==typeof f?g=a[f]=[]:f="mixpanel";g.people=g.people||[];h=['disable','track','track_pageview','track_links','track_forms','register','register_once','unregister','identify','name_tag','set_config','people.identify','people.set','people.increment'];for(e=0;e<h.length;e++)d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1;})(document,window.mixpanel||[]);mixpanel.init("871bd83d174bd67e8c8643e833a4514d");
+</script>
+
+
+      <script>
+        !function() {
+          var Facebook = require('airbnb.facebook');
+          Facebook.init({"appId":"138566025676","scope":"email,user_birthday,user_likes,user_education_history,user_hometown,user_interests,user_activities,user_location"});
+        }();
+      </script>
+
+    
+    <script src="https://a0.muscache.com/airbnb/static/homepage-7a275a54b4ca520e3a0712a669f794ea.js" type="text/javascript"></script>
+    
+
+    <script>
+      try {
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2725447-1']);
+        _gaq.push(['_setDomainName', '.airbnb.com.sg']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        setTimeout(function() {
+          var ga = document.createElement('script');
+          ga.src = '//stats.g.doubleclick.net/dc.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        }, 0);
+
+        window.___gcfg = {lang: 'en-SG', parsetags: 'onload'};
+
+
+        (function() {
+          var initOptions = {"canonical_host":"www.airbnb.com.sg","canonical_url":"https://www.airbnb.com.sg/","locale":"en"};
+          Airbnb.init(initOptions);
+
+          Airbnb.o2Version = "o2.1";
+
+          Airbnb.LangCurrPicker.init();
+
+
+          Airbnb.header = new Airbnb.Header();
+
+          if (Airbnb.Tracking) {
+            var userID = Airbnb.userAttributes.id || null,
+                roleType = "production";
+
+            Airbnb.Tracking.addDefaultContext();
+            Airbnb.Tracking.addContext(
+              _.extend({"o2Version":"o2.1","source":"monorail","platform":"js","version":"72964daf2d3fef98c18b959fcae25bd4c915e19c","controller":"homepages","action":"show","req_uuid":"9b2f544c-f591-4ba4-9fa7-fb0fdb906f3d"}, {
+                user_id: userID
+              }));
+
+            Airbnb.addInitHook(function() {
+              Airbnb.Tracking.init();
+
+              if (Airbnb.ExceptionTracker && window.TraceKit) {
+                Airbnb.ExceptionTracker.init(window.TraceKit,
+                                             Airbnb.Tracking,
+                                             userID,
+                                             roleType);
+              }
+
+            });
+          }
+
+        })();
+
+        Airbnb.Api.configure({"baseUrl":"https://www.airbnb.com.sg/api","key":"d306zoyjsyarp7ifhu67rjxn52tv0t20"});
+
+
+          (function() {
+            var flash = require('o2-flash');
+            flash.display('.flash-container');
+          })();
+
+        
+  !function($) {
+    var $location = $('#location');
+    $location.focus();
+
+    $(window).on('load', function() {
+      Airbnb.Utils.withGooglePlaces(function(){
+        var autocomplete = new google.maps.places.Autocomplete(
+          $location[0], {types: ["geocode"]}
+        );
+      });
+    });
+
+    var $pacContainer = null;
+    $location.on('keydown', function(e) {
+      if(e.keyCode === 13) {
+        if(!$pacContainer || !$pacContainer.length) {
+          $pacContainer = $('.pac-container');
+        }
+        if($pacContainer.is(':visible')) e.preventDefault();
+      }
+    });
+  }(jQuery);
+  $(function(){
+    AIR.HomepageHelper.initHomepageHero();
+
+    $('img.lazy').lazyload({ effect: 'fadeIn', threshold : 50 });
+    $('img.avatar').lazyload({ threshold : 50 });
+
+    $(window).bind("load", function() {
+      AIR.HomepageHelper.initSlideshow();
+      setTimeout(function() {
+        Airbnb.Utils.preload(["https://a0.muscache.com/airbnb/static/packages/map_search-d36c314ff63f58db934b90aad654cd91.css","https://a0.muscache.com/airbnb/static/map_search-d933803a1e866874c13e68737fe6e2a4.js"]);
+      }, 200);
+      $('img.avatar').each(function(i, img){
+        $img = $(img);
+        $img.attr('src', $img.attr('data-original'));
+      });
+    });
+  });
+
+
+      } catch(e) {
+        if (window.TraceKit) {
+          TraceKit.report(e);
+        }
+      }
+    </script>
+
+    <script>
+(function($, ua) {
+  $(window).on('load.pellet', function(){
+    if(ua.should_drop_pellet){
+      Airbnb.Pellet.drop('kfgn8s24');
+    }
+  });
+
+  if (ua.should_drop_sift_pellet) {
+    $(window).on('load', function(){
+      window._sift = window._sift || [];
+      _sift.push(['_setAccount', '5d704de7e8']);
+      _sift.push(['_setUserId', ua.eid || '']);
+      _sift.push(['_setSessionId', Airbnb.Utils.readCookie('esid')]);
+      _sift.push(['_trackPageview']);
+      LazyLoad.js('//cdn.siftscience.com/s.js');
+    });
+  }
+
+})(jQuery, Airbnb.userAttributes);
+
+</script>
+
+
+    <script>
+      LazyLoad.js('//a0.muscache.com/3p/_latest/abb_combo_all_fb_locale-en_GB.js');
+    </script>
+
+  </body>
+</html>
+<!-- ver. 72964daf2d3fef98c18b959fcae25bd4c915e19c -->
