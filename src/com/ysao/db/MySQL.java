@@ -9,18 +9,17 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
 
-import org.apache.commons.io.FileUtils;
 
 public class MySQL {
 
-	/**
-	 * @param args
-	 */
+	static final Logger logger = Logger.getLogger(MySQL.class.getName());
+	
 	public static void main(String[] args) throws Exception{
 		// TODO Auto-generated method stub
 		//String sql = "select case_id, status, request_id, template_id, process_time from testrun_qe2_FVT where run_id = 332 ";
@@ -35,13 +34,13 @@ public class MySQL {
 	
 	public static Connection getConnection() throws Exception{
 		if(con == null || con.isClosed()){
-		String connectionURL = "jdbc:mysql://10.162.182.137:3306/ibudget?autoReconnect=true";
+		String connectionURL = "jdbc:mysql://localhost:3306/ysao?autoReconnect=true";
 		Connection connection = null;
 		Statement statement = null;
 		ResultSet rs = null;
 
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		con = DriverManager.getConnection(connectionURL, "root", "password");
+		con = DriverManager.getConnection(connectionURL, "ouser", "password");
 	}
 		
 		return con;
@@ -52,13 +51,13 @@ public class MySQL {
 
 	public static Connection getNewConnection() throws Exception{
 		Connection newconn = null;
-		String connectionURL = "jdbc:mysql://10.162.182.137:3306/ibudget";
+		String connectionURL = "jdbc:mysql://10.162.182.137:3306/ysao";
 		Connection connection = null;
 		Statement statement = null;
 		ResultSet rs = null;
 
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
-		newconn = DriverManager.getConnection(connectionURL, "root", "password");
+		newconn = DriverManager.getConnection(connectionURL, "ouser", "password");
 		
 		return newconn;
 		
@@ -258,6 +257,36 @@ public class MySQL {
 		 
 	}
 	
+	public static void closeCON(Connection con){
+		if (con != null){
+			try{
+				con.close();
+			}catch(Exception e){
+				logger.warning("Fail to close connection " + e.getMessage());
+			}
+		}
+	}
+	
+	
+	public static void closeSTMT(Statement smtm){
+		if (smtm != null){
+			try{
+				smtm.close();
+			}catch(Exception e){
+				logger.warning("Fail to close statement " + e.getMessage());
+			}
+		}
+	}
+	
+	public static void closeRS(ResultSet rs){
+		if (rs != null){
+			try{
+				rs.close();
+			}catch(Exception e){
+				logger.warning("Fail to close reslutset " + e.getMessage());
+			}
+		}
+	}
 	
 
 }

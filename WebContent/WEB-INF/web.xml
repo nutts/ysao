@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="OberonTest" version="2.5">
-  <display-name>DWTar</display-name>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>ysao</display-name>
+  <jsp-config>
+    <jsp-property-group>
+      <description>  
+                Special property group for JSP Configuration JSP   
+                example.   
+            </description>
+      <description>  
+                Special property group for JSP Configuration JSP   
+                example.   
+            </description>
+      <display-name>JSPConfiguration</display-name>
+      <display-name>JSPConfiguration</display-name>
+      <url-pattern>*.jsp</url-pattern>
+      <url-pattern>*.html</url-pattern>
+      <el-ignored>true</el-ignored>
+      <page-encoding>UTF-8</page-encoding>
+      <scripting-invalid>false</scripting-invalid>
+      <include-prelude></include-prelude>
+      <include-prelude></include-prelude>
+      <include-coda></include-coda>
+      <include-coda></include-coda>
+    </jsp-property-group>
+  </jsp-config>
   <servlet>
     <servlet-name>signup_login</servlet-name>
     <servlet-class>com.ysao.servlet.Signup</servlet-class>
