@@ -3,11 +3,12 @@
 <html lang="zh" xmlns:fb="http://ogp.me/ns/fb#">
 <head>
 <link
-	href="https://a0.muscache.com/airbnb/static/packages/map_search-d36c314ff63f58db934b90aad654cd91.css"
-	media="screen" rel="stylesheet" type="text/css" />
+	href="css/common_o1.0.css" media="all" rel="stylesheet" type="text/css" />
+
 <link
-	href="https://a0.muscache.com/airbnb/static/packages/common_o2.1-f3a83f72e1aae5646f463212d86ada17.css"
-	media="all" rel="stylesheet" type="text/css" />
+	href="css/map_search.css"
+	media="screen" rel="stylesheet" type="text/css" />
+
 
 <style>
 </style>
@@ -19,8 +20,6 @@
 <title>北京 月嫂 | 搜索 - Ysao</title>
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-5.newrelic.com","errorBeacon":"jserror.newrelic.com","licenseKey":"fc09a36731","applicationID":"2237","transactionName":"dlwMQktaWAgBEB1BVlRBAV4WXFoAARo=","queueTime":20,"applicationTime":515,"ttGuid":"","agentToken":null,"agent":"js-agent.newrelic.com/nr-380.min.js","extra":""}</script>
-<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UwUCWUVRCgAH"};window.NREUM||(NREUM={}),__nr_require=function t(e,n,r){function o(i){if(!n[i]){var a=n[i]={exports:{}};e[i][0].call(a.exports,function(t){var n=e[i][1][t];return o(n?n:t)},a,a.exports,t,e,n,r)}return n[i].exports}for(var i=0;i<r.length;i++)o(r[i]);return o}({1:[function(t,e){function n(t,e,n){n||(n={});for(var r=i[t],o=r&&r.length||0,s=n[a]||(n[a]={}),d=0;o>d;d++)r[d].apply(s,e);return s}function r(t,e){var n=i[t]||(i[t]=[]);n.push(e)}function o(t){return delete t[a]}var i={},a="nr@context";e.exports={on:r,emit:n,clear:o}},{}],2:[function(t){function e(t,e,o,a,d){return s?s-=1:n("err",[d||new UncaughtException(t,e,o)]),"function"==typeof i?i.apply(this,r(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}var n=t("handle"),r=t(6),o=t(5),i=window.onerror,a=!1,s=0;t("loader").features.push("err"),window.onerror=e;try{throw new Error}catch(d){"stack"in d&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(4),a=!0)}o.on("fn-start",function(){a&&(s+=1)}),o.on("fn-err",function(t,e,r){a&&(this.thrown=!0,n("err",[r,(new Date).getTime()]))}),o.on("fn-end",function(){a&&!this.thrown&&s>0&&(s-=1)})},{1:5,2:4,3:3,4:6,5:1,6:14,handle:"D5DuLP",loader:"G9z0Bl"}],3:[function(t){function e(t){r.inPlace(t,["addEventListener","removeEventListener"],"-",n)}function n(t){return t[1]}var r=t(1),o=(t(3),t(2));if(e(window),"getPrototypeOf"in Object){for(var i=document;i&&!i.hasOwnProperty("addEventListener");)i=Object.getPrototypeOf(i);i&&e(i);for(var a=XMLHttpRequest.prototype;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&e(a)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&e(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=r(e,"fn-"):"function"==typeof e.handleEvent&&r.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:15,2:1,3:14}],4:[function(t){var e=(t(3),t(1)),n=t(2);e.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=e(t[0],"fn-")})},{1:15,2:1,3:14}],5:[function(t){function e(t){var e=t[0];"string"==typeof e&&(e=new Function(e)),t[0]=n(e,"fn-")}var n=(t(3),t(1)),r=t(2);n.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",e)},{1:15,2:1,3:14}],6:[function(t){function e(){n.inPlace(this,i,"fn-")}var n=t(1),r=t(2),o=window.XMLHttpRequest,i=["onload","onerror","onabort","onloadstart","onloadend","onprogress","onreadystatechange","ontimeout"];window.XMLHttpRequest=function(t){var i=new o(t);return r.emit("new-xhr",[],i),n.inPlace(i,["addEventListener","removeEventListener"],"-",function(t,e){return e}),i.addEventListener("readystatechange",e,!1),i},window.XMLHttpRequest.prototype=o.prototype},{1:15,2:1}],7:[function(t){function e(){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;p>o;o++)t.removeEventListener(u[o],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,s="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,d=e(s);if(d&&(r.rxSize=d),this.sameOrigin){var f=t.getResponseHeader("X-NewRelic-App-Data");f&&(n.cat=f.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,i("xhr",[n,r])}}}function r(t,e){var n=a(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}function o(t,e){return e}t("loader").features.push("xhr");var i=t("handle"),a=t(1),s=t(5),d=t(6),u=["load","error","abort","timeout"],p=u.length,f=t(2);t(3),t(4),d.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),s.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),d.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),d.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var a=e(o);a&&(r.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){}};for(var s=0;p>s;s++)n.addEventListener(u[s],this.listener,!1)}),d.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),d.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],e)}),d.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],e)}),d.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),d.on("fn-end",function(t,e){this.xhrCbStart&&d.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&e()},{1:8,2:11,3:3,4:6,5:15,6:1,handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e){var n=r[t];return n?n.apply(this,e):(o[t]||(o[t]=[]),void o[t].push(e))}var r={},o={};e.exports=n,n.queues=o,n.handlers=r},{}],11:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=c.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID){c.proto="https"===f.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=d.createElement("script");e.src=c.proto+t.agent,d.body.appendChild(e)}}function r(){"complete"===d.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,d=s.document,u="addEventListener",p="attachEvent",f=(""+location).split("?")[0],c=e.exports={offset:i(),origin:f,features:[]};d[u]?(d[u]("DOMContentLoaded",o,!1),s[u]("load",n,!1)):(d[p]("onreadystatechange",r),s[p]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],14:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],15:[function(t,e){function n(t,e,n,r){function nrWrapper(){try{var a,s=i(arguments),d=this,u=n&&n(s,d)||{};o.emit(e+"start",[s,d,r],u)}catch(p){}try{return a=t.apply(d,s)}catch(f){try{o.emit(e+"err",[s,d,f],u)}catch(p){}throw f}finally{try{o.emit(e+"end",[s,d,a],u)}catch(p){}}}return t&&"function"==typeof t&&t.apply&&!t._wrapped?(e||(e=""),nrWrapper._wrapped=!0,nrWrapper):t}function r(t,e,r,o){r||(r="");var i,a,s,d="-"===r.charAt(0);for(s=0;s<e.length;s++)a=e[s],i=t[a],i&&"function"==typeof i&&i.apply&&!i._wrapped&&(t[a]=n(i,d?a+r:r,o,a,t))}var o=t(1),i=t(2);e.exports=n,n.inPlace=r},{1:1,2:14}]},{},["G9z0Bl",2,7]);</script>
 
 <link rel="canonical" href="https://zh.airbnb.com/s/北京--中国">
 <meta name="description" content="向在北京居住的人租房，房价每晚$16 SGD/起 510 房源。">
@@ -37,9 +36,9 @@
 <body class=" ">
 
 	<jsp:include page="header.html" />
-	<script src="scripts/header_cookie.js" type="text/javascript"></script>
-
-	<script>new HeaderPreload();</script>
+	<!-- script src="scripts/header_cookie.js" type="text/javascript"></script-->
+	<script src="scripts/jquery.min.js" type="text/javascript"></script>
+	<!-- script>new HeaderPreload();</script-->
 
 	<div class='span12 flash-container'>
     </div>
@@ -50,7 +49,7 @@
 
 		<jsp:include page="filter.jsp" />
 
-			
+			<input type="button" name="test_button" value="test_button" onclick="loadSearch();" />
 		<div class="sidebar-header-placeholder"></div>
 		<div class="search-results">
 
@@ -66,8 +65,9 @@
 
 			<div class="outer-listings-container">
 				<ul id="results" class="listings-container list-unstyled clearfix">
-
-
+<!-- 
+<li class="search-result"><h4>GOOODDD</h4><div data-name="??" data-url="/aunts/show.jsp?aid=1 data-user="1" class="listing"><div class="listing-img media-photo"><a class="wish_list_button" rel="tooltip" data-tooltip-position="right" title="????????????"><i class="icon icon-heart"></i></a><div class="listing-img-container"><img src="images/016ed0c9_original.jpg" data-current="0"  data-urls="https://a1.muscache.com/ic/pictures/18026901/016ed0c9_original.jpg"/></div></div></li><li class="search-result"><h4>GOOODDD</h4><div data-name="??" data-url="/aunts/show.jsp?aid=2 data-user="2" class="listing"><div class="listing-img media-photo"><a class="wish_list_button" rel="tooltip" data-tooltip-position="right" title="????????????"><i class="icon icon-heart"></i></a><div class="listing-img-container"><img src="images/016ed0c9_original.jpg" data-current="0"  data-urls="https://a1.muscache.com/ic/pictures/18026901/016ed0c9_original.jpg"/></div></div></li><li class="search-result"><h4>GOOODDD</h4><div data-name="??" data-url="/aunts/show.jsp?aid=3 data-user="3" class="listing"><div class="listing-img media-photo"><a class="wish_list_button" rel="tooltip" data-tooltip-position="right" title="????????????"><i class="icon icon-heart"></i></a><div class="listing-img-container"><img src="images/016ed0c9_original.jpg" data-current="0"  data-urls="https://a1.muscache.com/ic/pictures/18026901/016ed0c9_original.jpg"/></div></div></li>
+-->
 
 					<li class="search-result">
 
@@ -86,10 +86,16 @@
 								</a>
 
 								<div class="listing-img-container">
+								<!-- 
 									<img
 										src="https://a1.muscache.com/ic/pictures/18026901/016ed0c9_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=u"
 										data-current="0"
 										data-urls="[&quot;https://a1.muscache.com/ic/pictures/18026901/016ed0c9_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=u&quot;, &quot;https://a2.muscache.com/ic/pictures/18026716/c2ff5d70_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=u&quot;, &quot;https://a2.muscache.com/ic/pictures/24471171/9eb5f3ed_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=v&quot;, &quot;https://a0.muscache.com/ic/pictures/24151070/03aed6ad_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=v&quot;, &quot;https://a2.muscache.com/ic/pictures/24151193/2c29d406_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=v&quot;, &quot;https://a2.muscache.com/ic/pictures/24151128/6f25b7b8_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=v&quot;, &quot;https://a0.muscache.com/ic/pictures/24151119/a24f4ce9_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=v&quot;, &quot;https://a1.muscache.com/ic/pictures/24471242/f2741cef_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=v&quot;, &quot;https://a2.muscache.com/ic/pictures/24471366/cf181a20_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=v&quot;, &quot;https://a0.muscache.com/ic/pictures/24151202/6a9c0c7a_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=v&quot;, &quot;https://a2.muscache.com/ic/pictures/24151230/40f9130f_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=v&quot;, &quot;https://a2.muscache.com/ic/pictures/24151276/e1af405d_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=v&quot;, &quot;https://a2.muscache.com/ic/pictures/24151256/e1ddfbc2_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=v&quot;, &quot;https://a2.muscache.com/ic/pictures/24151210/7159c90b_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=v&quot;, &quot;https://a1.muscache.com/ic/pictures/23800178/54a4081d_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=u&quot;, &quot;https://a0.muscache.com/ic/pictures/24151169/998b180a_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=v&quot;, &quot;https://a2.muscache.com/ic/pictures/23078014/c47c193a_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=u&quot;, &quot;https://a1.muscache.com/ic/pictures/17973212/c171f770_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=u&quot;, &quot;https://a2.muscache.com/ic/pictures/17973135/85f47be5_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=u&quot;, &quot;https://a0.muscache.com/ic/pictures/23078006/2afdef3b_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=u&quot;, &quot;https://a1.muscache.com/ic/pictures/23078118/7966043b_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=u&quot;, &quot;https://a0.muscache.com/ic/pictures/23078425/14348cf9_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=u&quot;, &quot;https://a0.muscache.com/ic/pictures/17973174/68cf96ad_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=u&quot;, &quot;https://a0.muscache.com/ic/pictures/17973295/02fbd647_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=u&quot;]" />
+									-->	
+										 
+										<img
+										src="https://a1.muscache.com/ic/pictures/18026901/016ed0c9_original.jpg?interpolation=progressive-bicubic&amp;size=x_medium&amp;output-format=jpg&amp;output-quality=85&amp;wm=u"/>
+								
 								</div>
 
 
@@ -1540,23 +1546,6 @@
 		</div>
 	</div>
 
-	<div class="map">
-		<div class="map-canvas"></div>
-
-		<div class="map-refresh-controls">
-			<a class="map-manual-refresh btn btn-primary hide"> <i
-				class="icon icon-refresh"></i>在这里重新搜索
-			</a>
-			<div class="panel map-auto-refresh hide">
-				<label class="checkbox"> <input
-					class="map-auto-refresh-checkbox" type="checkbox" checked="checked">
-					在我移动地图时进行搜索
-				</label>
-			</div>
-		</div>
-
-	</div>
-
 	<button class="btn footer-toggle">
 		<span class="open-content"> <i class="icon icon-globe"></i>
 			语言和货币
@@ -1662,52 +1651,47 @@
       <script src="https://a0.muscache.com/airbnb/static/libs_jquery_1x-da2b7120de1fca716ec9b10839dfc882.js" type="text/javascript"></script>
     <![endif]-->
 	<!--[if gte IE 9]><!-->
-	<script
-		src="https://a0.muscache.com/airbnb/static/libs_jquery_2x-ba3075998163c02622926b9556bc93aa.js"
+	<!-- 
+	<script 	src="scripts/libs_jquery_2x.js"
 		type="text/javascript"></script>
+		--> 
+		<script src="scripts/jquery-ui-1.10.4.js" type="text/javascript"></script>
 	<!--<![endif]-->
+	<!-- 
 	<script
-		src="https://a0.muscache.com/airbnb/static/o2.1-9e66faa1b065085ab19854caf0e470e4.js"
+		src="scripts/o2.1.js"
 		type="text/javascript"></script>
+		-->
+		<!-- 
 	<script
-		src="https://a0.muscache.com/airbnb/static/core-92388a4f745893b9f095a6aee66a6e4f.js"
+		src="scripts/core.js"
 		type="text/javascript"></script>
-
+-->
 	<script>
-      I18n.init(
+   /*    I18n.init(
         {"country":"US","currencies":{"ARS":{"symbol":"$","code_required":true,"options":null},"AUD":{"symbol":"$","code_required":true,"options":null},"BRL":{"symbol":"R$","code_required":false,"options":{"space_between_price_and_symbol":true}},"CAD":{"symbol":"$","code_required":true,"options":null},"CHF":{"symbol":"CHF","code_required":false,"options":{"position":"after","space_between_price_and_symbol":true}},"CNY":{"symbol":"&yen;","code_required":false,"options":{"unicode_symbol":"¥"}},"CZK":{"symbol":"&#75;&#269;","code_required":false,"options":{"unicode_symbol":"Kč"}},"DKK":{"symbol":"kr","code_required":true,"options":{"position":"after","space_between_price_and_symbol":true,"explicit_currency_not_aesthetic":true}},"EUR":{"symbol":"&euro;","code_required":false,"options":{"unicode_symbol":"€","position":"special"}},"GBP":{"symbol":"&pound;","code_required":false,"options":{"unicode_symbol":"£"}},"HKD":{"symbol":"$","code_required":true,"options":null},"HUF":{"symbol":"Ft","code_required":false,"options":null},"IDR":{"symbol":"Rp","code_required":false,"options":null},"ILS":{"symbol":"&#8362;","code_required":false,"options":{"unicode_symbol":"₪","space_between_price_and_symbol":true}},"INR":{"symbol":"&#8377;","code_required":false,"options":{"unicode_symbol":"₹"}},"JPY":{"symbol":"&yen;","code_required":false,"options":{"unicode_symbol":"¥","space_between_price_and_symbol":true}},"KRW":{"symbol":"&#8361;","code_required":false,"options":{"unicode_symbol":"₩","space_between_price_and_symbol":true}},"MYR":{"symbol":"&#82;&#77;","code_required":false,"options":{"unicode_symbol":"RM"}},"MXN":{"symbol":"$","code_required":true,"options":null},"NOK":{"symbol":"kr","code_required":true,"options":{"position":"after","space_between_price_and_symbol":true,"explicit_currency_not_aesthetic":true}},"NZD":{"symbol":"$","code_required":true,"options":null},"PHP":{"symbol":"&#8369;","code_required":false,"options":{"unicode_symbol":"₱"}},"PLN":{"symbol":"z&#22;&#322;","code_required":false,"options":{"unicode_symbol":"zł"}},"RUB":{"symbol":"&#1088;","code_required":false,"options":{"unicode_symbol":"р","position":"after"}},"SEK":{"symbol":"kr","code_required":true,"options":{"position":"after","space_between_price_and_symbol":true,"explicit_currency_not_aesthetic":true}},"SGD":{"symbol":"$","code_required":true,"options":null},"THB":{"symbol":"&#3647;","code_required":false,"options":{"unicode_symbol":"฿"}},"TRY":{"symbol":"&#84;&#76;","code_required":false,"options":{"unicode_symbol":"TL","position":"after","space_between_price_and_symbol":true}},"TWD":{"symbol":"$","code_required":true,"options":null},"USD":{"symbol":"$","code_required":false,"options":null},"VND":{"symbol":"&#8363;","code_required":false,"options":{"unicode_symbol":"₫"}},"ZAR":{"symbol":"R","code_required":true,"options":null}},"current_locale_name":"中文","languages":[{"locale_name":"Bahasa Indonesia","locale":"id"},{"locale_name":"Bahasa Melayu","locale":"ms"},{"locale_name":"Català","locale":"ca"},{"locale_name":"Dansk","locale":"da"},{"locale_name":"Deutsch","locale":"de"},{"locale_name":"English","locale":"en"},{"locale_name":"Español","locale":"es"},{"locale_name":"Eλληνικά","locale":"el"},{"locale_name":"Français","locale":"fr"},{"locale_name":"Italiano","locale":"it"},{"locale_name":"Magyar","locale":"hu"},{"locale_name":"Nederlands","locale":"nl"},{"locale_name":"Norsk","locale":"no"},{"locale_name":"Polski","locale":"pl"},{"locale_name":"Português","locale":"pt"},{"locale_name":"Suomi","locale":"fi"},{"locale_name":"Svenska","locale":"sv"},{"locale_name":"Türkçe","locale":"tr"},{"locale_name":"Íslenska","locale":"is"},{"locale_name":"Čeština","locale":"cs"},{"locale_name":"Русский","locale":"ru"},{"locale_name":"ภาษาไทย","locale":"th"},{"locale_name":"中文 (简体)","locale":"zh"},{"locale_name":"中文 (繁體)","locale":"zh-TW"},{"locale_name":"日本語","locale":"ja"},{"locale_name":"한국어","locale":"ko"}]}
       );
       I18n.extend({"Password":"\u5bc6\u7801","users.Confirm_Password_to_Continue":"\u786e\u8ba4\u5bc6\u7801\u4ee5\u7ee7\u7eed","users.Confirm_Password":"\u786e\u8ba4\u5bc6\u7801","users.Cancel":"\u53d6\u6d88","users.Please_enter_your_Airbnb_password_to_continue.":"\u4e3a\u4e86\u60a8\u7684\u5b89\u5168\uff0c\u8bf7\u8f93\u5165\u60a8\u7684Airbnb\u5bc6\u7801\u4ee5\u7ee7\u7eed\u64cd\u4f5c\u3002","user.signup.forgot_password":"\u5fd8\u8bb0\u5bc6\u7801\uff1f","users.Confirm_Facebook_Password":"\u786e\u8ba4Facebook\u5bc6\u7801","choose_language":"\u9009\u62e9\u8bed\u8a00","choose_currency":"\u9009\u62e9\u8d27\u5e01","clear_dates":"\u6e05\u9664\u65e5\u671f"});
-    </script>
+  */   </script>
 
 
-	<script>
+	<!-- script>
   (function(c,a){window.mixpanel=a;var b,d,h,e;
   a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var g=a;"undefined"!==typeof f?g=a[f]=[]:f="mixpanel";g.people=g.people||[];h=['disable','track','track_pageview','track_links','track_forms','register','register_once','unregister','identify','name_tag','set_config','people.identify','people.set','people.increment'];for(e=0;e<h.length;e++)d(g,h[e]);a._i.push([b,c,f])};a.__SV=1.1;})(document,window.mixpanel||[]);mixpanel.init("871bd83d174bd67e8c8643e833a4514d");
-</script>
+</script-->
 
 
+	
 	<script>
-        !function() {
-          var Facebook = require('airbnb.facebook');
-          Facebook.init({"appId":"138566025676","scope":"email,user_birthday,user_likes,user_education_history,user_hometown,user_interests,user_activities,user_location"});
-        }();
-      </script>
-
-	<script>
-    I18n.extend({"priv.everyone":"\u6bcf\u4e2a\u4eba","priv.only_me":"\u53ea\u6709\u6211","priv.description":"\u8c01\u53ef\u4ee5\u770b\u5230\u8fd9\u4e9b\uff1f","priv.everyone_description":"\u5bf9\u6240\u6709\u4eba\u53ef\u89c1\u5e76\u5305\u62ec\u5728\u60a8\u7684 Airbnb \u4e2a\u4eba\u8d44\u6599\u516c\u5171\u9875\u9762\u5185\u3002","priv.only_me_description":"\u4ec5\u81ea\u5df1\u53ef\u89c1\uff0c\u4e0d\u4f9b\u5206\u4eab\u3002","save_to_wish_list":"\u4fdd\u5b58\u5230Wish List","save_to_wish_list_and_fb":"\u4fdd\u5b58\u5230Wish List\u53caFacebook\u65f6\u95f4\u8f74","wl_modal.create_new":"\u521b\u5efa\u65b0\u7684","wl_modal.make_a_new":"\u521b\u5efa\u4e00\u4e2a\u65b0\u7684Wish List\u2026","wl_modal.create":"\u521b\u5efa","wl_modal.add_note":"\u6dfb\u52a0\u5907\u6ce8","wl_modal.add_to_timeline":"\u6dfb\u52a0\u5230\u65f6\u95f4\u8f74","wl_modal.share_wishlists_on_timeline":"\u628aWish Lists\u5206\u4eab\u5230\u65f6\u95f4\u8f74","wl_modal.done":"\u5b8c\u6210","wl_modal.save":"\u4fdd\u5b58","wl_modal.change_sharing":"\u60a8\u53ef\u4ee5\u968f\u65f6\u5728\u201c\u5e10\u53f7\u8bbe\u7f6e\u201d\u4e2d\u66f4\u6539\u5171\u4eab\u9009\u9879\u3002","refresh_list":"\u5237\u65b0\u5217\u8868","who_can_see_new_wishlist":"\u8c01\u53ef\u4ee5\u770b\u5230\u60a8\u7684\u65b0Wish List\uff1f"});
+    //I18n.extend({"priv.everyone":"\u6bcf\u4e2a\u4eba","priv.only_me":"\u53ea\u6709\u6211","priv.description":"\u8c01\u53ef\u4ee5\u770b\u5230\u8fd9\u4e9b\uff1f","priv.everyone_description":"\u5bf9\u6240\u6709\u4eba\u53ef\u89c1\u5e76\u5305\u62ec\u5728\u60a8\u7684 Airbnb \u4e2a\u4eba\u8d44\u6599\u516c\u5171\u9875\u9762\u5185\u3002","priv.only_me_description":"\u4ec5\u81ea\u5df1\u53ef\u89c1\uff0c\u4e0d\u4f9b\u5206\u4eab\u3002","save_to_wish_list":"\u4fdd\u5b58\u5230Wish List","save_to_wish_list_and_fb":"\u4fdd\u5b58\u5230Wish List\u53caFacebook\u65f6\u95f4\u8f74","wl_modal.create_new":"\u521b\u5efa\u65b0\u7684","wl_modal.make_a_new":"\u521b\u5efa\u4e00\u4e2a\u65b0\u7684Wish List\u2026","wl_modal.create":"\u521b\u5efa","wl_modal.add_note":"\u6dfb\u52a0\u5907\u6ce8","wl_modal.add_to_timeline":"\u6dfb\u52a0\u5230\u65f6\u95f4\u8f74","wl_modal.share_wishlists_on_timeline":"\u628aWish Lists\u5206\u4eab\u5230\u65f6\u95f4\u8f74","wl_modal.done":"\u5b8c\u6210","wl_modal.save":"\u4fdd\u5b58","wl_modal.change_sharing":"\u60a8\u53ef\u4ee5\u968f\u65f6\u5728\u201c\u5e10\u53f7\u8bbe\u7f6e\u201d\u4e2d\u66f4\u6539\u5171\u4eab\u9009\u9879\u3002","refresh_list":"\u5237\u65b0\u5217\u8868","who_can_see_new_wishlist":"\u8c01\u53ef\u4ee5\u770b\u5230\u60a8\u7684\u65b0Wish List\uff1f"});
   </script>
-
-	<script
-		src="//ditu.google.com/maps/api/js?language=zh&sensor=false&v=3.13&libraries=places&client=gme-airbnbinc&channel=monorail-prod"></script>
-	<script
-		src="https://a0.muscache.com/airbnb/static/map_search-d933803a1e866874c13e68737fe6e2a4.js"
-		type="text/javascript"></script>
-
-
+ 
+	<!-- script
+		src="scripts/map_search.js"
+		type="text/javascript"--></script>
 
 	<script>
-      try {
+   /*    try {
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-2725447-1']);
         _gaq.push(['_setDomainName', '.airbnb.com']);
@@ -1760,9 +1744,9 @@
         })();
 
         Airbnb.Api.configure({"baseUrl":"https://zh.airbnb.com/api","key":"d306zoyjsyarp7ifhu67rjxn52tv0t20"});
+ */
 
-
-          (function() {
+       /*    (function() {
             var flash = require('o2-flash');
             flash.display('.flash-container');
           })();
@@ -1781,11 +1765,11 @@
         if (window.TraceKit) {
           TraceKit.report(e);
         }
-      }
+      } */
     </script>
 
 	<script>
-(function($, ua) {
+/* (function($, ua) {
   $(window).on('load.pellet', function(){
     if(ua.should_drop_pellet){
       Airbnb.Pellet.drop('kfgn8s24');
@@ -1804,14 +1788,187 @@
   }
 
 })(jQuery, Airbnb.userAttributes);
+ */
+</script>
+<script>
+function loadSearch(){
+	$.ajax({
+		type:"get",
+		dataType:"json",
+		url:"/ysao/Server",
+	    data: "page=1&name=张三",
+	    complete: function(){console.debug("complete");},
+	    success:function(msg){
+	    	
+	    	console.debug("before empty " + $("li").length);
+	    	
+	    	$('#results').empty();
+
+	    	console.debug("after empty " + $("li").length);
+	    	console.debug(msg);
+	    	//console.debug('<li class="search-result"><h4>GOOODDD</h4><div data-name="??" data-url="/aunts/show.jsp?aid=1 data-user="1" class="listing"><div class="listing-img media-photo"><a class="wish_list_button" rel="tooltip" data-tooltip-position="right" title="????????????"><i class="icon icon-heart"></i></a><div class="listing-img-container"><img src="images/016ed0c9_original.jpg" data-current="0"  data-urls="https://a1.muscache.com/ic/pictures/18026901/016ed0c9_original.jpg"/></div></div></li><li class="search-result"><h4>GOOODDD</h4><div data-name="??" data-url="/aunts/show.jsp?aid=2 data-user="2" class="listing"><div class="listing-img media-photo"><a class="wish_list_button" rel="tooltip" data-tooltip-position="right" title="????????????"><i class="icon icon-heart"></i></a><div class="listing-img-container"><img src="images/016ed0c9_original.jpg" data-current="0"  data-urls="https://a1.muscache.com/ic/pictures/18026901/016ed0c9_original.jpg"/></div></div></li><li class="search-result"><h4>GOOODDD</h4><div data-name="??" data-url="/aunts/show.jsp?aid=3 data-user="3" class="listing"><div class="listing-img media-photo"><a class="wish_list_button" rel="tooltip" data-tooltip-position="right" title="????????????"><i class="icon icon-heart"></i></a><div class="listing-img-container"><img src="images/016ed0c9_original.jpg" data-current="0"  data-urls="https://a1.muscache.com/ic/pictures/18026901/016ed0c9_original.jpg"/></div></div></li>');
+	    	//$("#results").append('<li class="search-result"><h4>GOOODDD</h4><div data-name="??" data-url="/aunts/show.jsp?aid=1 data-user="1" class="listing"><div class="listing-img media-photo"><a class="wish_list_button" rel="tooltip" data-tooltip-position="right" title="????????????"><i class="icon icon-heart"></i></a><div class="listing-img-container"><img src="images/016ed0c9_original.jpg" data-current="0"  data-urls="https://a1.muscache.com/ic/pictures/18026901/016ed0c9_original.jpg"/></div></div></li><li class="search-result"><h4>GOOODDD</h4><div data-name="??" data-url="/aunts/show.jsp?aid=2 data-user="2" class="listing"><div class="listing-img media-photo"><a class="wish_list_button" rel="tooltip" data-tooltip-position="right" title="????????????"><i class="icon icon-heart"></i></a><div class="listing-img-container"><img src="images/016ed0c9_original.jpg" data-current="0"  data-urls="https://a1.muscache.com/ic/pictures/18026901/016ed0c9_original.jpg"/></div></div></li><li class="search-result"><h4>GOOODDD</h4><div data-name="??" data-url="/aunts/show.jsp?aid=3 data-user="3" class="listing"><div class="listing-img media-photo"><a class="wish_list_button" rel="tooltip" data-tooltip-position="right" title="????????????"><i class="icon icon-heart"></i></a><div class="listing-img-container"><img src="images/016ed0c9_original.jpg" data-current="0"  data-urls="https://a1.muscache.com/ic/pictures/18026901/016ed0c9_original.jpg"/></div></div></li>');
+	    	
+	    	//var obj = jQuery.parseJSON(msg);
+	    	console.debug(msg.results);
+	    	$("#results").append(msg.results);
+	    	
+	    	console.debug("appened");
+	    	console.debug("after append2 " + $("li").length);
+	    	console.debug("appended2");
+	    }
+	});
+ 
+} 
+
+
 
 </script>
 
-
 	<script>
-      LazyLoad.js('//a0.muscache.com/3p/_latest/abb_combo_all_fb_locale-zh_CN.js');
+    //  LazyLoad.js('//a0.muscache.com/3p/_latest/abb_combo_all_fb_locale-zh_CN.js');
     </script>
+<script>
+console.debug("start process");
 
+/*
+$(".listing-img").find("img").each(function(){
+	console.debug("processing image");
+	//$(this).attr("src",$(this).data("urls")[0]).removeClass("hide");
+	$(this).attr("src","https://a2.muscache.com/ic/pictures/12073785/6d0ce7be_original.jpg?interpolation=progressive-bicubic&size=x_medium&output-format=jpg&output-quality=85&wm=v");
+	
+	console.debug($(this));
+})
+ */
+ 
+ //this.initPriceSlider=function(options){
+$(document).ready(function(){});
+
+		//console.debug("init...");
+	   //var $slider=this.select($(".price-range-slider"));
+	   
+		/* var $slider=this.select(".price-range-slider");
+		
+		var minPrice = $slider.data("data-min-price-monthly");
+		var maxPrice = $slider.data("data-max-price-monthly");
+		
+		$slider.data("minPrice", 1000);
+		$slider.data("maxPrice", 4000);
+		console.debug(minPrice);
+		console.debug(maxPrice);
+		
+		$slider.find(".min-price .price").html(minPrice);
+		
+		$slider.find(".max-price .price").html(maxPrice);
+		
+		var updateLabels=function(e,ui){
+			$slider.find(".min-price .price").html(ui.values[0]);
+			$slider.find(".max-price .price").html(ui.values[1])
+		};
+
+		$slider.slider({
+			range:true,values:[$slider.data("minPrice"),$slider.data("maxPrice")],min:$slider.data("minPrice"),max:$slider.data("maxPrice"),step:5,slide:updateLabels,change:function(e,ui){updateLabels(e,ui);
+			$slider.trigger("click")
+			}});
+			
+			 */
+			
+	 /* 	var $slider = $(".price-range-slider");
+		
+		//console.debug($slider.data());
+		//console.debug($(".price-range-slider").data("data-min-price-monthly"));
+		
+		$slider.find(".min-price .price").html($slider.data("minPrice"));
+		$slider.find(".max-price .price").html($slider.data("maxPrice"));
+		
+		//console.debug($("").data("minPrice"));
+		
+		//console.debug($slider.find(".min-price .price"));
+		
+		 var updateLabels=function(e,ui){
+			console.debug(ui);
+			$(".price-range-slider").find(".min-price .price").html(ui.values[0]);
+			$(".price-range-slider").find(".max-price .price").html(ui.values[1])
+		}; 
+		
+		$(".price-range-slider").slider({
+			range:true,values:[$slider.data("minPrice"),$slider.data("maxPrice")],min:$slider.data("minPrice"),max:$slider.data("maxPrice"),step:5,slide:updateLabels,change:function(e,ui){
+				console.debug("changed...");
+				updateLabels(e,ui);
+			$slider.trigger("click")
+			}}); 
+		console.debug("end slider init");
+	});
+ */
+	
+
+</script>
+<script src="scripts/flight.js"></script>
+<script src="scripts/aunt_search.js"></script>
+
+<!-- script src="scripts/jquery-ui-1.10.4.js"></script-->
+<script>
+/*
+ 
+$(document).ready(function(){
+	
+	var Filters = flight.component(function(){
+		this.defaultAttrs({
+			priceRangeSliderSelector: ".price-range-slider",
+		});
+	
+		this.initPriceSlider=function(){
+		
+		console.debug("in function");
+		var $slider = this.select('priceRangeSliderSelector');
+		//var $slider = $(".price-range-slider");
+		
+		$slider.find(".min-price .price").html($slider.data("minPrice"));
+		$slider.find(".max-price .price").html($slider.data("maxPrice"));
+		
+		console.debug($slider);
+		//console.debug($slider2);
+		console.debug($slider.data("minPrice"));
+		
+		var updateLabels=function(e,ui){
+			console.debug("update Labels");
+			
+			$slider.find(".min-price .price").html(ui.values[0]);
+			$slider.find(".max-price .price").html(ui.values[1]);
+		};
+		
+		$slider.slider({
+			range: true,
+			values: [$slider.data("minPrice"), $slider.data("maxPrice")],
+			min: $slider.data("minPrice"),
+			max: $slider.data("maxPrice"),
+			step: 5,
+			slider: updateLabels,
+			change: function(e,ui){
+				updateLabels(e,ui),
+				$slider.trigger("click");
+			}});
+	};
+	
+	
+ 	this.after("initialize", function(){
+		console.debug("start to init price slider");
+		this.initPriceSlider();
+	});
+	}); //end of component Filters;
+	
+	Filters.attachTo(".filters"); 
+	
+    //provide("aunt_search/Filters", Filters);
+});
+	*/
+	
+//http://simplebutgood.net/building-web-applications-with-flight-part-3/
+	
+	
+
+
+</script>
 </body>
 </html>
 <!-- ver. 159cce1d610bce4e2cc7b11e8e5ad77a75c0d56d -->

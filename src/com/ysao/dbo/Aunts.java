@@ -37,6 +37,8 @@ public class Aunts {
 		for(Aunt t: r){
 			sb.append(t.toHtmlSearchItem());
 		}
+		
+		logger.trace("in aunts string: " + sb.toString());
 		return sb.toString();
 		
 	}

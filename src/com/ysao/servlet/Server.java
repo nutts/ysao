@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -78,6 +79,9 @@ public class Server extends HttpServlet {
 			logger.error("Fail to specify results");
 			e.printStackTrace();
 		}
-		return o.toString();
+		logger.trace(o.toString());
+		//String re = "{\"results\":\"" + results + "\"}";
+		//return re;
+		return o.toString(); //json will espace </li> to <\/li>;
 	}
 }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<!--[if lt IE 9]>
+    <script src="scripts/es5-shim.min.js"></script>
+    <script src="scripts/es5-sham.min.js"></script>
+    <![endif]-->
+    
+
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/flight.js"></script>
+
+<body>
+
+<h1>Click Me</h1>
+<h1>Click Me</h1>
+<h1>Click Me</h1>
+<h1>Click Me</h1>
+<h1>Click Me</h1>
+<h1>Click Me</h1>
+<h1>Click Me</h1>
+
+222
+
+hello world;
+sss
+
+</body>
+<!-- script src="scripts/main.js"></script-->
+
+<script>
+var helloWorld = flight.component(function(){
+	
+	console.debug("component inital...");
+	
+	this.onClick = function(event){
+		event.stopPropagation();
+		//console.debug(event.target);
+		//alert('you just clicked the hi1');
+		this.$node.text('hell world from Fligh.js');
+	}
+	
+	//initialize
+	this.after('initialize', function(){
+		this.on('click', this.onClick);
+	})
+})
+
+helloWorld.attachTo("h1");
+</script> 
+</html>
