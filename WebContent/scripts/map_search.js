@@ -813,7 +813,8 @@ provide("map_search/Map",Map)
 !(function(){
 	var withListings=require("map_search/withListings");
 	var SearchResults=flight.component(function(){
-	this.render=function(e,data){
+	
+		this.render=function(e,data){
 		var $container=this.$node.find(".outer-listings-container");
 		if(data.currentSearch.source!=="initial"){
 			this.displayImages(data.$listings);
@@ -1206,7 +1207,7 @@ provide("map_search/Map",Map)
 				introFilterSelector:this.introFiltersChanged,
 				moreButtonSelector:this.toggleMoreFilters});
 			
-			this.on(this.select("keywordsSelector").closest("form"),"submit",this.keywordFormSubmitted);
+			this.on(this.select("keywordsSelector").closes qt("form"),"submit",this.keywordFormSubmitted);
 		
 			if(navigator.userAgent.indexOf("iPad")!==-1){
 				this.on("beforeShow.datepicker",this.scrollView)
@@ -1592,7 +1593,8 @@ provide("map_search/Disaster",Disaster)
 	MapSearchData=requireComponent("map_search/MapSearchData");
 	
 	var MapSearchPage=flight.component(function(){
-		this.after("initialize",function(){Map.attachTo(".map");
+		this.after("initialize",function(){
+		Map.attachTo(".map");
 		History.attachTo(this.$node);
 		Sidebar.attachTo(".sidebar");
 		Disaster.attachTo(".disaster-rooster");

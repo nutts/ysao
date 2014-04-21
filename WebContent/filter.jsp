@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<div class="filters collapse">
+<div class="filters">
 	<div class="intro-filter clearfix filters-section"
 		data-behavior="tooltip" data-position="left" title="旅程">
 
@@ -8,34 +8,9 @@
 
 		<form class="form-horizontal trip-form">
 
-			<i class="icon icon-arrow-right icon-gray"></i> <input name="checkin"
+			<i class="icon icon-gray"></i> <input name="checkin"
 				type="text" class="checkin input-medium" placeholder="预产期">
-
-			<!--  input name="checkout" type="text"
-						class="checkout input-medium" placeholder="退房"-->
-
-
-			<!-- div class="select input-medium">
-						<select name="guests" class="guest-select" data-prefill="">
-							<option value="1">1位房客</option>
-							<option value="2">2位房客</option>
-							<option value="3">3位房客</option>
-							<option value="4">4位房客</option>
-							<option value="5">5位房客</option>
-							<option value="6">6位房客</option>
-							<option value="7">7位房客</option>
-							<option value="8">8位房客</option>
-							<option value="9">9位房客</option>
-							<option value="10">10位房客</option>
-							<option value="11">11位房客</option>
-							<option value="12">12位房客</option>
-							<option value="13">13位房客</option>
-							<option value="14">14位房客</option>
-							<option value="15">15位房客</option>
-							<option value="16">16+位房客</option>
-						</select>
-					</div-->
-
+				<input name="onboardtime" type="hidden" id="onboardtime" />
 		</form>
 
 	</div>
@@ -74,6 +49,176 @@
 	</div>
 
 
+	 <div class="clearfix checkbox-group neighborhoods filters-section"
+       data-name="neighborhoods"
+       data-behavior="tooltip"
+       data-position="left"
+       title="Neighborhoods">
+
+    <h6 class="filter-label col-3">籍贯</h6>
+
+    <div class="control-group">
+      <div class="filters-columns">
+          <label class="media media-condensed checkbox">
+            <input type="checkbox" name="neighborhood" value="Chaoyang" class="pull-left">
+            <span class="media-body">湖南</span>
+          </label>
+          <label class="media media-condensed checkbox">
+            <input type="checkbox" name="neighborhood" value="Dongcheng" class="pull-left">
+            <span class="media-body">山东</span>
+          </label>
+          <label class="media media-condensed checkbox">
+            <input type="checkbox" name="neighborhood" value="Sunlitan" class="pull-left">
+            <span class="media-body">安徽</span>
+          </label>
+      </div>
+      <div class="filters-more hide">
+        <hr>
+        <div class="filters-columns">
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Ahn Jung" class="pull-left">
+              <span class="media-body">Ahn Jung</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Bei Tai Ping Zhuang" class="pull-left">
+              <span class="media-body">Bei Tai Ping Zhuang</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Chaoyang Park/Tuan Jie Hu" class="pull-left">
+              <span class="media-body">Chaoyang Park/Tuan Jie Hu</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Dawanglu" class="pull-left">
+              <span class="media-body">Dawanglu</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Dong Si" class="pull-left">
+              <span class="media-body">Dong Si</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Dongzhimen" class="pull-left">
+              <span class="media-body">Dongzhimen</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Fang Zhuang" class="pull-left">
+              <span class="media-body">Fang Zhuang</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Fengtai" class="pull-left">
+              <span class="media-body">Fengtai</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Foreign Trade" class="pull-left">
+              <span class="media-body">Foreign Trade</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Haidian" class="pull-left">
+              <span class="media-body">Haidian</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="ITC" class="pull-left">
+              <span class="media-body">ITC</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Jinsong/Panjiayuan" class="pull-left">
+              <span class="media-body">Jinsong/Panjiayuan</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Jiuxianqiao" class="pull-left">
+              <span class="media-body">Jiuxianqiao</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Jiàn Wài Dàjiē" class="pull-left">
+              <span class="media-body">Jiàn Wài Dàjiē</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Kaiyangli" class="pull-left">
+              <span class="media-body">Kaiyangli</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Liang Ma Qiao/Sanyuanqiao" class="pull-left">
+              <span class="media-body">Liang Ma Qiao/Sanyuanqiao</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Peace" class="pull-left">
+              <span class="media-body">Peace</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Qianmen" class="pull-left">
+              <span class="media-body">Qianmen</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Shazikou" class="pull-left">
+              <span class="media-body">Shazikou</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Shichahai" class="pull-left">
+              <span class="media-body">Shichahai</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Shilipu" class="pull-left">
+              <span class="media-body">Shilipu</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Shuangjing" class="pull-left">
+              <span class="media-body">Shuangjing</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Wai Avenue" class="pull-left">
+              <span class="media-body">Wai Avenue</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Wangfujing/Dongdan" class="pull-left">
+              <span class="media-body">Wangfujing/Dongdan</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Wangjing" class="pull-left">
+              <span class="media-body">Wangjing</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Wudaokou" class="pull-left">
+              <span class="media-body">Wudaokou</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Xicheng" class="pull-left">
+              <span class="media-body">Xicheng</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Xuanwu" class="pull-left">
+              <span class="media-body">Xuanwu</span>
+            </label>
+            <label class="media media-condensed checkbox">
+              <input type="checkbox" name="neighborhood" value="Zuojiazhuang" class="pull-left">
+              <span class="media-body">Zuojiazhuang</span>
+            </label>
+        </div>
+      </div>
+    </div>
+
+    <a class="btn show-more">
+      <span><i class="icon icon-caret-down"></i></span>
+      <span class="hide"><i class="icon icon-caret-up"></i></span>
+    </a>
+
+  </div>
+  
+  
+  <div class="clearfix keywords filters-section"
+       data-behavior="tooltip"
+       data-position="left"
+       title="Keywords">
+
+    <h6 class="filter-label col-3">姓名</h6>
+
+    <form class="form-horizontal">
+      <input class="keywords-input"
+             type="text"
+             name="keywords"
+             placeholder="姓名">
+    </form>
+
+  </div>
+  
 	<!-- 
 			<div class="clearfix filters-section
               "

@@ -2022,46 +2022,86 @@ if(!options.defaultsCheckin){options.defaultsCheckin=defaultCalendarOptions
 }$.each(["onSuccessCallback","onReset","onCheckinClose","onCheckoutClose"],function(i,val){if(!defOpts[val]){defOpts[val]=function(){}
 }});
 _ref.data("airbnb-datepickeroptions",defOpts);
-var checkinCalendarOptions=$.extend($.extend(true,{},options.defaultsCheckin),{beforeShow:beforeShowGenerator(),onClose:function(dateText,inst){var opts=_ref.data("airbnb-datepickeroptions");
-if(dateText){dateText=checkBeyondRange(this);
-var nextDate=$.datepicker.parseDate(dateText);
-nextDate=new Date(nextDate.setDate(nextDate.getDate()+1));
-var checkoutEl=opts.checkoutDatePicker;
-try{var checkoutDate=$.datepicker.parseDate(checkoutEl.val());
-checkoutEl.datepicker("option","minDate",nextDate);
-if(nextDate>checkoutDate){checkoutEl.val($.datepicker.formatDate(nextDate));
-checkoutEl.change();
-checkoutEl.focus()
-}else{opts.onSuccessCallback(nextDate,checkoutEl.val())
-}}catch(e){checkoutEl.datepicker("option","minDate",nextDate);
-checkoutEl.val($.datepicker.formatDate(nextDate));
-checkoutEl.focus()
-}}opts.onCheckinClose()
-},onReset:function(){var opts=_ref.data("airbnb-datepickeroptions");
-opts.checkoutDatePicker.datepicker("reset",true);
-opts.onReset()
-}});
-var checkoutCalendarOptions=$.extend($.extend(true,{},options.defaultsCheckout),{beforeShow:beforeShowGenerator({dateOffset:"+1"}),onClose:function(dateText,inst){var opts=_ref.data("airbnb-datepickeroptions");
-if(dateText){dateText=checkBeyondRange(this,1000*60*60*24);
-var prevDate=$.datepicker.parseDate(dateText);
-prevDate=new Date(prevDate.setDate(prevDate.getDate()-1));
-var checkinEl=opts.checkinDatePicker;
-try{var checkinDate=$.datepicker.parseDate(checkinEl.val());
-if(prevDate<checkinDate){checkinEl.val($.datepicker.formatDate(prevDate));
-checkinEl.focus()
-}else{opts.onSuccessCallback(checkinEl.val(),dateText)
-}}catch(e){checkinEl.val($.datepicker.formatDate(prevDate));
-checkinEl.focus()
-}}opts.onCheckoutClose()
-},onReset:function(){var opts=_ref.data("airbnb-datepickeroptions");
-opts.checkinDatePicker.datepicker("reset",true)
-}});
-defOpts.checkinDatePicker.datepicker(checkinCalendarOptions);
-defOpts.checkoutDatePicker.datepicker(checkoutCalendarOptions);
-checkinCalendarOptions.beforeShow(defOpts.checkinDatePicker);
-checkoutCalendarOptions.beforeShow(defOpts.checkoutDatePicker)
-}$.fn.airbnbInputDateSpan=function(options){return this.each(function(){if(typeof options==="string"){}else{attachDatepicker(this,options)
-}})
+var checkinCalendarOptions=$.extend(
+		$.extend(true,{},options.defaultsCheckin),
+		{
+			beforeShow:beforeShowGenerator(),
+			onClose:function(dateText,inst){
+				var opts=_ref.data("airbnb-datepickeroptions");
+				if(dateText){
+					dateText=checkBeyondRange(this);
+					var nextDate=$.datepicker.parseDate(dateText);
+					nextDate=new Date(nextDate.setDate(nextDate.getDate()+1));
+					var checkoutEl=opts.checkoutDatePicker;
+					try{
+						var checkoutDate=$.datepicker.parseDate(checkoutEl.val());
+						checkoutEl.datepicker("option","minDate",nextDate);
+						if(nextDate>checkoutDate){
+							checkoutEl.val($.datepicker.formatDate(nextDate));
+							checkoutEl.change();
+							checkoutEl.focus()
+						}else{
+							opts.onSuccessCallback(nextDate,checkoutEl.val())
+						}
+					}catch(e){
+						checkoutEl.datepicker("option","minDate",nextDate);
+						checkoutEl.val($.datepicker.formatDate(nextDate));
+						checkoutEl.focus()
+					}
+				}
+				opts.onCheckinClose()
+			},
+			onReset:function(){
+				var opts=_ref.data("airbnb-datepickeroptions");
+				opts.checkoutDatePicker.datepicker("reset",true);
+				opts.onReset()
+			}
+		});
+
+	var checkoutCalendarOptions=$.extend($.extend(true,{},options.defaultsCheckout),{
+		beforeShow:beforeShowGenerator({dateOffset:"+1"}),
+		onClose:function(dateText,inst){
+			var opts=_ref.data("airbnb-datepickeroptions");
+			if(dateText){
+				dateText=checkBeyondRange(this,1000*60*60*24);
+				var prevDate=$.datepicker.parseDate(dateText);
+				prevDate=new Date(prevDate.setDate(prevDate.getDate()-1));
+				var checkinEl=opts.checkinDatePicker;
+				try{
+					var checkinDate=$.datepicker.parseDate(checkinEl.val());
+					if(prevDate<checkinDate){
+						checkinEl.val($.datepicker.formatDate(prevDate));
+						checkinEl.focus()
+					}else{
+						opts.onSuccessCallback(checkinEl.val(),dateText)
+					}
+				}catch(e){
+					checkinEl.val($.datepicker.formatDate(prevDate));
+					checkinEl.focus()
+				}
+			}
+			
+			opts.onCheckoutClose()
+		},
+		onReset:function(){
+			var opts=_ref.data("airbnb-datepickeroptions");
+			opts.checkinDatePicker.datepicker("reset",true)
+		}});
+		
+	defOpts.checkinDatePicker.datepicker(checkinCalendarOptions);
+	defOpts.checkoutDatePicker.datepicker(checkoutCalendarOptions);
+	checkinCalendarOptions.beforeShow(defOpts.checkinDatePicker);
+	checkoutCalendarOptions.beforeShow(defOpts.checkoutDatePicker)
+	}
+
+	$.fn.airbnbInputDateSpan=function(options){
+		return this.each(function(){
+			if(typeof options==="string"){
+				
+			}else{
+				attachDatepicker(this,options)
+			}
+		})
 }
 })(jQuery);
 (function(){jQuery(document).ready(function(){if(typeof Backbone!=="undefined"&&Backbone!==null){return Airbnb.Mediator=_.extend({},Backbone.Events)
