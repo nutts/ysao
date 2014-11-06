@@ -44,12 +44,64 @@
     </div>
 
 	<div class="map-search">
-
+ 		<div class="map">
+  		  <div class="map-canvas">
+   	 	<jsp:include page="filter.jsp" />
+    </div>
+     
+  </div>
 	<div class="sidebar">
 		
-
-		<jsp:include page="filter.jsp" />
-		<div class="sidebar-header-placeholder"></div>
+	   
+		<div class="sidebar-header-placeholder">
+		
+		<div class="sidebar-header clearfix">
+	<button class="btn gray show-filters">
+		<i class="icon icon-filter"></i> <span class="text-more-filters">重置筛选条件</span><span
+			class="text-filters">筛选条件</span>
+	</button>
+	<ul class="applied-filters list-unstyled">
+		<li class="hide" data-applied-filter="room_types"><h6>
+				<span>&times;</span> 房间类型
+			</h6></li>
+		<li class="hide" data-applied-filter="price"><h6>
+				<span>&times;</span> 价格
+			</h6></li>
+		<li class="hide" data-applied-filter="size"><h6>
+				<span>&times;</span> 面积
+			</h6></li>
+		<li class="hide" data-applied-filter="connected"><h6>
+				<span>&times;</span> 社会联系
+			</h6></li>
+		<li class="hide" data-applied-filter="empHost"><h6>
+				<span>&times;</span> 员工房东
+			</h6></li>
+		<li class="hide" data-applied-filter="exp_types"><h6>
+				<span>&times;</span> 体验
+			</h6></li>
+		<li class="hide" data-applied-filter="neighborhoods"><h6>
+				<span>&times;</span> 街区
+			</h6></li>
+		<li class="hide" data-applied-filter="hosting_amenities"><h6>
+				<span>&times;</span> 便利设施
+			</h6></li>
+		<li class="hide" data-applied-filter="property_type_id"><h6>
+				<span>&times;</span> 房源类型
+			</h6></li>
+		<li class="hide" data-applied-filter="languages"><h6>
+				<span>&times;</span> 房东语言
+			</h6></li>
+		<li class="hide" data-applied-filter="keywords"><h6>
+				<span>&times;</span> 关键词
+			</h6></li>
+		<li class="results-count-item"><h1 class="results-count">510个出租房源
+				&middot; 北京</h1></li>
+	</ul>
+</div>
+		
+		
+		
+		</div>
 		<div class="search-results">
 
 			<div class="alert disaster-rooster hide row-space-4">
@@ -1544,14 +1596,16 @@
 
 		</div>
 	</div>
-
+	
+	
+  <!--  
 	<button class="btn footer-toggle">
 		<span class="open-content"> <i class="icon icon-globe"></i>
 			语言和货币
 		</span> <span class="close-content"><i class="icon icon-remove"></i>
 			关闭</span>
 	</button>
-
+-->
 	</div>
 
 

@@ -1,0 +1,909 @@
+<%@ page language="java" contentType="text/html;charset=UTF-8"
+	pageEncoding="utf-8"%>
+<%@ page import="com.ysao.dbo.AuntManager" %>	
+
+<%
+String id = request.getParameter("id");
+id = "2937";
+
+AuntManager aMgr = new AuntManager(id);
+
+
+%>
+<html lang="zh" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+<meta charset="utf-8">
+
+<link
+	href="css/common_o2.1.css"
+	media="all" rel="stylesheet" type="text/css" />
+	
+<link
+	href="css/page3.css"
+	media="screen" rel="stylesheet" type="text/css" />
+
+
+<style>
+</style>
+
+<meta id="csrf-param-meta-tag" name="csrf-param"
+	content="authenticity_token" />
+<meta id="csrf-token-meta-tag" name="csrf-token" content="" />
+
+<title>位于北京的Best Homestay close to BJ center</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="description"
+	content="私人房间 价格$27. A Bed in Living Room with Curtain for Privacy
+----------------------------------------------------------
+We welcome you to stay at our clean, luxur...">
+
+
+
+
+
+<meta name="viewport" content="width=1000,maximum-scale=1.0">
+<link rel="image_src"
+	href="https://a1.muscache.com/pictures/18026901/x_large.jpg">
+<link rel="search" type="application/opensearchdescription+xml"
+	href="/opensearch.xml" title="Airbnb">
+
+<!--[if lt IE 9]>
+      <script src="https://a0.muscache.com/airbnb/static/vendor/html5shiv-69a2aa52c3c22c05685997eb91ac7036.js" type="text/javascript"></script>
+    <![endif]-->
+<link rel="shortcut icon" type="image/x-icon"
+	href="https://a0.muscache.com/airbnb/static/logotype_favicon-2e5a2c7c6a64c00b95ed01dec8b85f57.ico">
+</head>
+<body class=" no_wiggle_webkit">
+	
+
+
+
+	<div id="header" class="navbar navbar-top">
+		<div class="navbar-inner">
+			<div class="container container-full-width page-container">
+				<a href="/" class="brand airbnb">Airbnb</a>
+				<ul class="nav">
+					<li id="header-search">
+						<form action="/s" id="search-form">
+							<div id="search-bar">
+								<i class="icon icon-search"></i> <input type="text"
+									placeholder="您想去哪里？" autocomplete="off" name="location"
+									id="header-location"> <input type="hidden"
+									name="source" value="hdr">
+							</div>
+							<div id="header-search-settings">
+								<label class="checkin">入住 <input type="text"
+									id="header-search-checkin" name="checkin" class="checkin"
+									placeholder="年-月-日" /></label> <label class="checkout">退房 <input
+									type="text" id="header-search-checkout" class="checkout"
+									name="checkout" placeholder="年-月-日" /></label> <label class="guests">房客
+									<div class="select select-block">
+										<select id="header-search-guests" name="guests">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+										</select>
+									</div>
+								</label> <label>房间类型</label> <label class="checkbox" for="room_type_0"><input
+									type="checkbox" id="room_type_0" name="room_types[]"
+									value="Entire home/apt" /> 整套房子/公寓</label> <label class="checkbox"
+									for="room_type_1"><input type="checkbox"
+									id="room_type_1" name="room_types[]" value="Private room" />
+									私人房间</label> <label class="checkbox" for="room_type_2"><input
+									type="checkbox" id="room_type_2" name="room_types[]"
+									value="Shared room" /> 共用房间</label>
+								<button type="submit" class="btn btn-primary blue">
+									<i class="icon icon-search"></i> 寻找住处
+								</button>
+							</div>
+						</form>
+					</li>
+					<li class="dropdown item_explore"><a class="dropdown-toggle"
+						href="javascript:void(0)"> 浏览 <b class="caret"></b></a>
+						<ul class="dropdown-menu dropdown-bordered">
+							<li><a href="/wishlists/popular"><i
+									class="icon icon-product-wishlist icon-heart pink"></i> 热门</a></li>
+							<li><a href="/wishlists/friends"><i
+									class="icon icon-group"></i> 好友</a></li>
+							<li><a href="/locations"><i
+									class="icon icon-product-neighborhoods icon-map-marker blue"></i>
+									街区</a></li>
+							<li class="meetups"><a href="/meetup"><i
+									class="icon icon-product-meetups icon-meetups"></i> 见面会</a></li>
+							<li class="groups"><a href="/groups"><i
+									class="icon icon-comments"></i> 群组</a></li>
+						</ul></li>
+				</ul>
+
+				<ul class="nav pull-right help-menu" style="margin-left: 0;">
+					<li class="dropdown" data-dropdown-sticky="true"><a
+						id="help_dropdown" class="dropdown-toggle help-toggle"
+						href="javascript:void(0)"> 帮助 <b class="caret"></b></a>
+						<div class="dropdown-menu help-dropdown dropdown-bordered">
+							<div class="nav-header">
+								<a href="/help?ref=help-dropdown" class="help-center-link">访问帮助中心
+									&#187;</a>
+							</div>
+							<ul class="unstyled list-unstyled">
+								<li class="loading"></li>
+								<li class="hidden"><a href="/safety?ref=help-dropdown"
+									class="">访问我们的“信任与安全中心”</a></li>
+								<li class="all_faqs hidden"><a
+									href="/help/topic/hosting?ref=help-dropdown">查看全部常见问题</a></li>
+								<li id="faqadmin" style="display: none;"><input
+									type="hidden" name="faq_link[page]" value="rooms-show">
+								</li>
+							</ul>
+						</div></li>
+					<li class="list-your-space"><a id="list-your-space"
+						class="yellow btn btn-special" href="/rooms/new">发布您的空间</a></li>
+				</ul>
+
+				<ul class="nav pull-right logged-out">
+					<li id="sign_up"><a data-signup-modal
+						href="/signup_login?redirect_params[action]=show&amp;redirect_params[checkin]=2014-04-30&amp;redirect_params[checkout]=2014-05-03&amp;redirect_params[controller]=rooms&amp;redirect_params[id]=1195448&amp;redirect_params[s]=EwrT">注册</a></li>
+					<li id="login"><a data-login-modal
+						href="/login?redirect_params[action]=show&amp;redirect_params[checkin]=2014-04-30&amp;redirect_params[checkout]=2014-05-03&amp;redirect_params[controller]=rooms&amp;redirect_params[id]=1195448&amp;redirect_params[s]=EwrT">登录</a></li>
+				</ul>
+
+				<ul class="nav pull-right logged-in">
+					<li class="dropdown user-item"><a class="dropdown-toggle"
+						href="javascript:void(0)">
+							<div class="mini-media-box media-photo user-profile-image"></div>
+							<span class="value_name">用户</span> <b class="caret"></b>
+					</a>
+						<ul class="dropdown-menu dropdown-bordered header-dropdown">
+							<li><a href="/home/dashboard">控制面板</a></li>
+							<li class="listings"><a href="/rooms"> <span
+									class="singular" style="display: none;">您的房源</span> <span
+									class="plural">您的房源</span>
+							</a></li>
+							<li class="reservations" style="display: none;"><a
+								href="/my_listings">您的预订</a></li>
+							<li><a href="/trips/upcoming">您的旅程</a></li>
+							<li><a href="/wishlists/my" id="wishlists">Wish Lists</a></li>
+							<li class="groups"><a href="/groups">群组</a></li>
+							<li><a href="/invite?r=3"> 邀请好友 <span
+									class="label label-pink label-new">新登场</span>
+							</a></li>
+							<li><a href="/users/edit">编辑个人资料</a></li>
+							<li><a href="/account">帐号</a></li>
+							<li><a href="/logout" id="header-logout">退出</a></li>
+						</ul></li>
+					<li class="divider-vertical"></li>
+					<li id="inbox-item"><a href="/inbox"><i
+							class="icon icon-mail hide-text"><span class="text-hide">收件箱</span></i><i
+							class="alert-count position-super fade">0</i></a></li>
+					<li class="divider-vertical"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- script src="scripts/header_cookie.js" type="text/javascript"></script-->
+
+	<!-- script>new HeaderPreload();</script-->
+
+	<div class='span12 flash-container'></div>
+
+
+	<script>
+  window.ERF_EXPERIMENTS = {
+		  "validation_test":{
+			  "subject":"bev",
+			  "buckets":100,
+			  "percent_exposed":100,
+			  "treatments":[{"name":"baseline","buckets":50},{"name":"treatment","buckets":50}]
+  			},
+  			"validation_test_js":{
+  					"subject":"bev",
+  					"buckets":100,
+  					"percent_exposed":100,
+  					"treatments":[{"name":"baseline","buckets":50},{"name":"treatment","buckets":50}]
+  			},
+  			"no_street_view":{
+  				"subject":"bev",
+  				"buckets":100,
+  				"percent_exposed":100,
+  				"treatments":[{"name":"baseline","buckets":50},{"name":"treatment","buckets":50}]
+  			},
+  			"booking_cta_copy":{
+  				"subject":"bev",
+  				"buckets":100,
+  				"percent_exposed":100,
+  				"treatments":[{"name":"book_it_and_instant_book","buckets":33},{"name":"book_it_only","buckets":33},{"name":"control","buckets":34}]
+  			}
+  		};
+</script>
+	<!-- script src="scripts/erf_lite.js" type="text/javascript"></script-->
+
+	<div id="og_pro_photo_prompt" class="container"></div>
+
+	<div id="room"
+		class="page-container page-container-fixed row-space-top-4" itemscope
+		itemtype="http://schema.org/Product">
+		<meta itemprop="image"
+			content="https://a1.muscache.com/pictures/18026901/large.jpg">
+		<div class="row row-space-1">
+			<div class="col-12">
+				<div class="row-space-1 clearfix">
+					<ul class="share-box list-unstyled">
+						<li class="share-item"><a
+							class="text-share-button weibo-share-button"
+							href="http://service.weibo.com/share/share.php?url=https%3A%2F%2Fzh.airbnb.com%2Frooms%2F1195448&title=%E5%8E%BB%E7%9C%8B%E7%9C%8BAirbnb%E7%9A%84%E8%BF%99%E4%B8%AA%E8%B6%85%E6%A3%92%E7%9A%84%E6%88%BF%E6%BA%90%EF%BC%9A%E4%BD%8D%E4%BA%8E%E5%8C%97%E4%BA%AC%E7%9A%84Best+Homestay+close+to+BJ+center&pic=https%3A%2F%2Fa1.muscache.com%2Fpictures%2F18026901%2Fsmall.jpg&language=zh_cn&ralateUid=3787942764&searchPic=true&appkey=1437815036"
+							rel="nofollow" target="_blank">
+								<div>
+									<div class="icon"></div>
+									<div title="分享到新浪微博" class="text">新浪微博</div>
+								</div>
+						</a></li>
+						<li class="share-item"><a
+							class="text-share-button qzone-share-button"
+							href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https%3A%2F%2Fzh.airbnb.com%2Frooms%2F1195448&title=%E4%BD%8D%E4%BA%8E%E5%8C%97%E4%BA%AC%E7%9A%84Best+Homestay+close+to+BJ+center&desc=&summary=位于中国北京的公寓&site=&pics=https%3A%2F%2Fa1.muscache.com%2Fpictures%2F18026901%2Fx_large.jpg"
+							rel="nofollow" target="_blank">
+								<div>
+									<div class="icon"></div>
+									<div title="分享到QQ空间" class="text">QQ空间</div>
+								</div>
+						</a></li>
+					</ul>
+				</div>
+
+				<div class="row row-table row-space-1 action-row">
+					<div class="col-9 col-top">
+						<h1 itemprop="name" title="Best Homestay close to BJ center">
+							<div class="overflow" id="listing_name">Best Homestay close
+								to BJ center</div>
+						</h1>
+						<div class="h4">
+							<a href="/s/%E5%8C%97%E4%BA%AC--China?type=apartment"
+								class="property-type text-normal">公寓</a> - 私人房间 &middot; <span
+								id="display-address"
+								data-location="Side Road of N. 3rd Ring Road Middle, 北京, 北京 100011, 中国">
+								Side Road of N. 3rd Ring Road Middle, 北京, 北京 100011, 中国 </span>
+						</div>
+					</div>
+					<div class="col-3 col-bottom action-column">
+						<ul id="action-buttons" class="list-unstyled clearfix text-right">
+							<li class="review_count"><a href="#reputation-mark"> <i
+									class="icon icon-reviews icon-blue text-special">19</i><br>
+									评价
+							</a></li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-8">
+
+				<div class="panel row-space-2">
+					<ul id="main-nav" class="panel-header tabs tabs-header"
+						role="tablist">
+						<li class="photos"><a aria-controls="photos"
+							class="tab-item" role="tab" aria-selected="true"> 照片 </a></li>
+						<li class="calendar"><a 
+							aria-controls="calendar" class="tab-item" aria-selected="false"
+							role="tab"> 日历 </a></li>
+					</ul>
+					<div id="flagging-widget">
+						<form accept-charset="UTF-8" action="/user_flags"
+							class="new_user_flag" id="new_user_flag" method="post">
+							<div style="margin: 0; padding: 0; display: inline">
+								<input name="utf8" type="hidden" value="&#x2713;" /><input
+									name="authenticity_token" type="hidden"
+									value="V2_.airbnb.com_959b817d17e4aba2" />
+							</div>
+							<div class="flag-container" style="display: block;">
+								<div class="click-target clearfix">
+									<span class="expand"></span>
+									<h5>私下举报此房源</h5>
+									<span class="status"></span>
+								</div>
+								<ul class="unstyled list-unstyled">
+									<li><a href="#" class=""
+										data-reason-id="Inappropriate/offensive content">不适当的/冒犯性内容</a>
+									</li>
+									<li><a href="#" class=""
+										data-reason-id="Misleading/suspicious information">误导性/可疑信息</a>
+									</li>
+									<li><a href="#" class="" data-reason-id="Spam">垃圾邮件</a></li>
+									<li class="other"><a href="#" class=""
+										data-reason-id="Other">其它</a>
+										<div class="other-container">
+											<input id="user_flag_other_note" name="user_flag[other_note]"
+												placeholder="输入原因" size="30" type="text" />
+										</div></li>
+								</ul>
+								<input id="user_flag_flaggable_type"
+									name="user_flag[flaggable_type]" type="hidden" value="listing" />
+								<input id="user_flag_flaggable_id"
+									name="user_flag[flaggable_id]" type="hidden" value="1195448" />
+								<input id="user_flag_name" name="user_flag[name]" type="hidden" />
+							</div>
+						</form>
+					</div>
+					<div id="photos" class="slideshow panel-body tab-panel"
+						aria-hidden="false" role="tabpanel">
+						<div id="slideshow" class="slideshow">
+							<div class="panel-body image-container">
+								<div class="media-photo" data-slideshow-next="true">
+									<ul class="slideshow-images">
+										<li class="active"><img alt="Large" height="426"
+											src="https://a1.muscache.com/pictures/18026901/large.jpg"
+											width="639" /></li>
+										<li></li>
+									</ul>
+									<div
+										class="slideshow-caption media-caption media-caption-large panel-padding"></div>
+								</div>
+							</div>
+							<div class="panel-body thumbnails-container">
+								<a href="#" class="slideshow-btn slideshow-prev btn gray"
+									data-slideshow-prev="true"> <i
+									class="icon icon-chevron-left"></i>
+								</a>
+								<div class="thumbnails-viewport">
+									<ul class="slideshow-thumbnails thumbnails-slide-panel">
+
+										<li><a class="active media-photo media-slideshow"
+											href="https://a1.muscache.com/pictures/18026901/large.jpg"
+											title="A clean, romantic bed in living room"> <img
+												src="https://a1.muscache.com/pictures/18026901/mini_square.jpg"
+												alt="A clean, romantic bed in living room" height="40"
+												width="40" />
+										</a></li>
+
+										<li><a class=" media-photo media-slideshow"
+											href="https://a2.muscache.com/pictures/18026716/large.jpg"
+											title="Close shot of the living room bedside table"> <img
+												src="https://a2.muscache.com/pictures/18026716/mini_square.jpg"
+												alt="Close shot of the living room bedside table"
+												height="40" width="40" />
+										</a></li>
+
+										<li><a class=" media-photo media-slideshow"
+											href="https://a0.muscache.com/pictures/23078425/large.jpg"
+											title=""> <img
+												data-src="https://a0.muscache.com/pictures/23078425/mini_square.jpg"
+												alt="Best Homestay close to BJ center" height="40"
+												width="40" />
+										</a></li>
+
+										<li><a class=" media-photo media-slideshow"
+											href="https://a0.muscache.com/pictures/17973174/large.jpg"
+											title="5 minutes walk to North 3rd ring road, Global Trade Centre">
+
+												<img
+												data-src="https://a0.muscache.com/pictures/17973174/mini_square.jpg"
+												alt="5 minutes walk to North 3rd ring road, Global Trade Centre"
+												height="40" width="40" />
+										</a></li>
+
+										<li><a class=" media-photo media-slideshow"
+											href="https://a0.muscache.com/pictures/17973295/large.jpg"
+											title="A fitness centre within walking distance"> <img
+												data-src="https://a0.muscache.com/pictures/17973295/mini_square.jpg"
+												alt="A fitness centre within walking distance" height="40"
+												width="40" />
+										</a></li>
+									</ul>
+								</div>
+								<a href="#" class="slideshow-btn slideshow-next btn gray"
+									data-slideshow-next="true"> <i
+									class="icon icon-chevron-right"></i>
+								</a>
+							</div>
+							<div class="slideshow-preload"></div>
+						</div>
+
+					</div>
+					<div id="calendar" class="panel-body tab-panel" aria-hidden="true"
+						role="tabpanel">
+						<div class="row">
+							<div class="col-7" id="calendar2">
+								<form accept-charset="UTF-8"
+									action="/rooms/calendar_tab_inner2/1195448"
+									id="calendar-refresh-form" method="post">
+									<div style="margin: 0; padding: 0; display: inline">
+										<input name="utf8" type="hidden" value="&#x2713;" /> <input
+											name="authenticity_token" type="hidden"
+											value="V2_.airbnb.com_959b817d17e4aba2" />
+									</div>
+									<div class="row-space-2">
+										选择月份
+										<div class="select">
+											<select id="calendar-date" name="calendar-date">
+												<option value="2014/04/01" selected="selected">四月
+													2014</option>
+												<option value="2014/05/01">五月 2014</option>
+												<option value="2014/06/01">六月 2014</option>
+												<option value="2014/07/01">七月 2014</option>
+												<option value="2014/08/01">八月 2014</option>
+												<option value="2014/09/01">九月 2014</option>
+												<option value="2014/10/01">十月 2014</option>
+												<option value="2014/11/01">十一月 2014</option>
+												<option value="2014/12/01">十二月 2014</option>
+												<option value="2015/01/01">一月 2015</option>
+												<option value="2015/02/01">二月 2015</option>
+												<option value="2015/03/01">三月 2015</option>
+												<option value="2015/04/01">四月 2015</option>
+											</select>
+										</div>
+									</div>
+
+									<div id="calendar-inner-container"></div>
+
+									<div id="legend">
+										<div class="available key">&nbsp;</div>
+										<div class="key-text">可供选择</div>
+
+										<div class="unavailable key">&nbsp;</div>
+										<div class="key-text">不可选择</div>
+
+										<div class="in_the_past key">&nbsp;</div>
+										<div class="key-text">之前</div>
+									</div>
+								</form>
+							</div>
+							<div class="col-5">
+								<p>日历每5分钟更新一次，但只是月嫂状态的大致参考。</p>
+								<p>
+									有些房东会为日历上的某些日期设置自定义价格，如周末或节假日。所标价格为每日价格，不含任何清洁费或房东可能对入住此房源的额外房客收取的费用。请参阅房源的“描述”标签获取更多详细信息。
+								</p>
+								<p>我们建议您在提交预订申请前联系房东确认房源状态和价格。</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+
+				<div id="details" class="panel row-space-2">
+					<ul class="panel-header tabs tabs-header" role="tablist">
+						<li><a id="description_link"
+							class="tab-item" aria-controls="description-panel"
+							aria-selected="true" role="tab"> 描述 </a></li>
+						<li><a id="amenity_link"  
+							class="tab-item" role="tab" aria-controls="amenities-panel"
+							aria-selected="false"> 职业技能 </a></li>
+						<li><a id="this_hosting_reviews_link"
+							class="tab-item" role="tab" aria-controls="reputation-panel"
+							aria-selected="false"> 评价 (<%= aMgr.getReviewCount() %>) </a></li>
+						<li><a id="house_rules_link"
+							aria-controls="house-rules-panel" class="tab-item"
+							aria-selected="false" role="tab"> 《工作守则》 </a></li>
+					</ul>
+
+					<div id="description-panel" class="panel-body tab-panel"
+						aria-hidden="false" role="tabpanel">
+						
+						<%= aMgr.getDescription() %>
+					</div>
+
+					<div id="amenities-panel" class="panel-body tab-panel"
+						aria-hidden="true" role="tabpanel">
+						
+						<!--  auto load by jquery -->
+						
+						<%= aMgr.getSkillsHtml() %>
+					</div>
+							
+							<div id="reputation-panel" class="panel-body tab-panel rep_content" aria-hidden="true" role="tabpanel">
+								<div id="review-summary" class="row row-space-4">
+									<!--  review summary -->
+									<%= aMgr.getRateHtml() %>
+								</div>
+								<ul class="list-unstyled reviews-list clearfix">
+								
+								
+								
+								</ul>
+
+							</div>
+						
+
+					<div id="house-rules-panel" class="panel-body tab-panel"
+						aria-hidden="true" role="tabpanel">
+
+						<div id="house_rules_text">
+							<p>
+								I. Sanitation and garbage <br />A. Tenant shall maintain the
+								unit rented to him clean and free of accumulations of garbage
+								and rubbish at all times. <br />B. Garbage and rubbish shall be
+								disposed of in containers designated for the purpose. <br />C.
+								No hazardous substances may be disposed of in the garbage
+								containers, but must be disposed of as required by applicable
+								health and safety regulations and codes. <br />II. CONDUCT IN
+								PREMISES AND COMMON AREAS <br />A. No clothing, curtains or
+								other items shall be hung out of windows. <br />B. Tenant shall
+								refrain from creating or permitting his guests or invitees to
+								create, any noise or sounds in his rental unit or common areas
+								which is disturbing to residents or neighbors during the hours
+								of 9 pm to 9 am the next morning [a
+								&#x27;&#x27;curfew&#x27;&#x27; provision] <br />E. Tenant shall
+								refrain from playing any musical instrument, radio, music
+								system, entertainment system, or television set at a volume
+								which causes disturbance to other residents. <br />F. Tenant
+								shall refrain, and ensure his guests and invitees refrain, from
+								any conduct which a reasonable person would deem likely to annoy
+								or disturb other residents, while in the rental unit itself, or
+								the common areas and parking facilities. <br />Ill. USE OF THE
+								PREMISES AND COMMON AREAS <br />A. Tenant is responsible for
+								keeping his rental unit secure. Except to the extent provided by
+								law, landlord is not responsible for the illegal acts of others,
+								including burglary or theft. <br />B. Landlord does not provide
+								insurance coverage. Tenant is solely responsible for securing
+								such insurance, including insuring the contents of his unit, as
+								he deems prudent. <br />C. During absences by tenant, landlord
+								and his agents will provide access to no other persons, known to
+								tenant and landlord or not, unless expressly requested to do so
+								by tenant in writing. This shall not constitute any undertaking
+								by, or confer any duty upon, landlord or his agents to provide
+								such access at any particular time. <br />D. Tenant shall
+								immediately notify landlord if any door or window lock or bar in
+								his unit becomes unserviceable. <br />E. Tenant shall notify
+								landlord of any extended absences (more than six days) from the
+								premises <br />F. Tenant shall not use or store gasoline,
+								cleaning solvents, or other combustible substances in the rental
+								unit, or any parking or storage spaces provided in connection
+								with his occupancy of the unit. <br />G. Tenant shall not use
+								barbecues, grills, or other outdoor cooking equipment indoors,
+								or use them outdoors in such a way as to create a fire hazard or
+								substantial risk of damage to the rental unit or common areas. <br />REFUND
+								<br />See Refund Policy <br />HAVE A NICE STAY.
+							</p>
+						</div>
+					</div>
+				</div>
+
+
+
+
+			</div>
+			<div class="col-4" id="right_column">
+
+				<form accept-charset="UTF-8"
+					action="https://zh.airbnb.com/payments/book?hosting_id=1195448"
+					class="info new-o2-form-inline" id="book_it_form" method="post">
+					<div style="margin: 0; padding: 0; display: inline">
+						<input name="utf8" type="hidden" value="&#x2713;" /><input
+							name="authenticity_token" type="hidden"
+							value="V2_.airbnb.com_959b817d17e4aba2" />
+					</div>
+					<div id="book_it" class="panel row-space-2">
+						<div class="panel-body panel-dark">
+							<div id="pricing" class="book_it_section row-space-1"
+								itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+								<div id="payment-period-container" class=" select">
+									<select id="payment_period">
+										<option value="per_night">每晚</option>
+										<option value="per_week">每周</option>
+										<option value="per_month">每月</option>
+									</select>
+								</div>
+
+								<span id="per_month" class="pull-right hide"> 每月 </span>
+
+								<div class="text-muted">从</div>
+								<div id="price_amount" itemprop="price" class="h1 text-special">
+									$27</div>
+								<meta content="USD" itemprop='priceCurrency'>
+								<div id="includesFees" class="help-block" style="display: none;">
+									<span class="desc-no-taxes"> 包含所有费用 </span> <span
+										class="desc-with-taxes hide"> 包括所有费用和税费 </span> <i
+										id="price-info-tooltip"
+										class="icon icon-question icon-question-sign"
+										data-behavior="tooltip"></i>
+								</div>
+							</div>
+
+							<div class="row row-condensed">
+								<div class="col-9">
+									<div class="row row-condensed">
+										<div class="col-6">
+											<label for="checkin"> 入住日期 </label> <input class="checkin"
+												id="checkin" name="checkin" placeholder="年-月-日" type="text" />
+										</div>
+										<div class="col-6">
+											<label for="checkout"> 退房日期 </label> <input class="checkout"
+												id="checkout" name="checkout" placeholder="年-月-日"
+												type="text" />
+										</div>
+									</div>
+								</div>
+								<div class="col-3">
+									<label for="number_of_guests"> 房客 </label>
+									<div class="select select-block">
+										<select class="input-tiny" id="number_of_guests"
+											name="number_of_guests" onchange="Airbnb.refreshSubTotal();"><option
+												value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16+</option></select>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="book_it_status" class="panel-body">
+							<div id="book_it_enabled" class="clearfix">
+								<div id="subtotal_area" class="hide">
+									<span id="subtotal-label" class="text-muted hide"> 小计 </span> <span
+										id="total-label" class="text-muted hide"> 总价 </span>
+									<div id="subtotal" class="h1 text-special row-space-1"></div>
+								</div>
+								<div id="book_it_button_container">
+									<button type="submit"
+										class="btn btn-primary btn-large btn-block"
+										id="book_it_button">
+
+
+										<span class="book-it"> 预订 </span> <span class="instant-book">
+											即时预订 <i class="icon icon-forward"></i>
+										</span>
+
+
+									</button>
+								</div>
+							</div>
+
+							<button class="btn btn-block btn-large btn-contact-me"
+								id="contact-me">联系我</button>
+
+							<div id="book_it_disabled" class="text-center"
+								style="display: none;">
+								<p id="book_it_disabled_message" class="icon-red">此房源不可出租。</p>
+								<a class='btn btn-large btn-block'
+									id='view_other_listings_button'
+									onclick="if(check_inputs()){redo_search();}; return false;"
+									href=""> 查看其它房源 </a>
+							</div>
+
+							<div id="show_more_subtotal_info" style="display: none;"
+								class="row-space-top-2 text-center text-muted">
+								<span id="excludes_fees_no_tax" class="desc-no-taxes">
+									不包括Airbnb服务费 (<span class="service_fee"></span>)
+								</span> <span id="excludes_fees_with_tax" class="desc-with-taxes hide">
+									不包括Airbnb服务费(<span class="service_fee"></span>)和税费(<span
+									id="tax_amount"></span>)
+								</span>
+
+							</div>
+						</div>
+					</div>
+					<input id="hosting_id" name="hosting_id" type="hidden"
+						value="1195448" />
+				</form>
+				<span class="tooltip tooltip-top-middle" role="tooltip"
+					data-trigger="#price-info-tooltip">
+					<p class="panel-body desc-no-taxes">这是最终价格，包含房东及Airbnb收取的所有费用。
+					</p>
+					<div id="tax-rules" class="desc-with-taxes hide"></div>
+				</span>
+
+
+				<div id="wish_list_button_box" class="panel row-space-2">
+					<div class="panel-body panel-dark">
+						<button
+							class="wish_list_button not_saved btn gray btn-block large btn-large"
+							data-hosting_id="1195448"
+							data-img="https://a1.muscache.com/pictures/18026901/large.jpg"
+							data-name="Best Homestay close to BJ center"
+							data-address="Side Road of N. 3rd Ring Road Middle, 北京 (Ahn Jung)"
+							data-tooltip-el="#wl-button-tooltip">
+							<i class="icon icon-product-wishlist pink icon-heart icon-pink"></i>
+							<span class="text saved">已保存到Wish List</span> <span
+								class="text not_saved">保存到Wish List</span>
+						</button>
+						<div class="tooltip fade" id="wl-button-tooltip">
+							保存此房源以便以后评价。</div>
+						<div id="wishlist-dropdown"></div>
+
+						<div class="saved_count text-muted text-center row-space-top-2">
+							已保存<span class=count>118</span>次
+						</div>
+					</div>
+				</div>
+
+
+				<div id="user" class="row-space-2 ">
+					<div class="panel clearfix">
+						<div class="panel-body panel-dark text-center">
+							<div class="row-space-2">
+								<a href="/users/show/3630863" class="media-photo media-link"><img
+									alt="Isabel" height="272" nopin="nopin"
+									src="https://a2.muscache.com/ic/users/3630863/profile_pic/1394721935/original.jpg?interpolation=progressive-bicubic&amp;crop=w:w;*,*&amp;crop=h:h;*,*&amp;resize=225:*&amp;output-format=jpg&amp;output-quality=85"
+									title="Isabel" width="272" /></a>
+							</div>
+
+							<div class="h2 text-special row-space-1">
+								<a href="/users/show/3630863"> Isabel </a>
+							</div>
+
+							<a id="more-info-toggle" href="#"> <span class='more'>
+									更多房东信息 <i class="icon icon-caret-right"></i>
+							</span> <span class='less'> 更少房东信息 <i
+									class="icon icon-caret-down"></i>
+							</span>
+							</a>
+						</div>
+						<div id="more-info" class="panel-body panel-light">
+							<dl class="row-space-2">
+								<dt>语言</dt>
+								<dd>English, 中文</dd>
+
+								<dt>学校</dt>
+								<dd>Universitiy in Beijing</dd>
+
+								<dt>工作</dt>
+								<dd>International Auditor Firm</dd>
+
+								<dt>关于</dt>
+								<dd>I am female born in 80&#x27;s. I love to read and enjoy
+									meeting friends from different countries. I am studying
+									international finance now, and speak fairly good English. I
+									don&#x27;t smoke so I prefer a clean, neat and smoke free
+									environment. My home town is in Shang Dong, the Confucius birth
+									place. Be my guest and you will enjoy learning the culture of
+									China, the Confucius teaching and art of making a tea. We like
+									to share our food and I like to make western Pancakes or the
+									eastern one. I welcome you to be my guest.</dd>
+							</dl>
+							<a href="/users/show/3630863">查看完整个人资料</a>
+						</div>
+
+						<div class="panel-body panel-light">
+
+							<div class="row row-space-2">
+								<div class="col-6">
+									<span class="h3"> <small>回复率</small>
+									</span>
+								</div>
+								<div class="col-6">
+									<span class="h3">100%</span>
+								</div>
+							</div>
+
+							<div class="row row-space-2">
+								<div class="col-6">
+									<span class="h3"> <small>回复时间</small>
+									</span>
+								</div>
+								<div class="col-6">
+									<span class="h3">1小时内</span>
+								</div>
+							</div>
+
+							<div class="row row-space-2">
+								<div class="col-6">
+									<span class="h3"> <small>日历已更新</small>
+									</span>
+								</div>
+								<div class="col-6">
+									<span class="h3">4天前</span>
+								</div>
+							</div>
+
+							<div id="contact_wrapper">
+
+								<button type="submit" class="btn btn-block btn-large "
+									id="user_contact_link">联系我</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+				<div class="trust-and-safety panel row-space-2">
+					<div class="panel-body panel-light">
+						<h4>Airbnb是如何促进安全保障的?</h4>
+						<ul>
+							<li><a href="/safety"> 了解安全保障信息 </a></li>
+							<li>7*24小时客服热线</li>
+							<li>丰富的用户信息和评价</li>
+						</ul>
+					</div>
+				</div>
+
+
+				<div id="fb_p3_sidebar" class="row-space-2" style="display: none">
+					<div id="fb_p3_sidebar_inner" class="panel">
+						<div id="fb_not_logged_in" class="panel-body panel-light"
+							style="display: none">
+							<h4>您或您的好友与此房东有联系吗？</h4>
+							<p>超过6亿用户加入了社交网络。加入您的好友，看看他们都租住过哪些地方。</p>
+
+							<a
+								href="https://www.facebook.com/dialog/oauth?client_id=138566025676&amp;redirect_uri=https%3A%2F%2Fzh.airbnb.com%2Fauthenticate%3Fredirect_params%5Baction%5D%3Dshow%26redirect_params%5Bcontroller%5D%3Drooms%26redirect_params%5Bfb_login%5D%3D1%26redirect_params%5Bid%5D%3D1195448%26ref%3Dfb_p3side&amp;scope=email%2Cuser_birthday%2Cuser_likes%2Cuser_education_history%2Cuser_hometown%2Cuser_interests%2Cuser_activities%2Cuser_location"
+								class="fb-button fb-blue btn icon-btn btn-large btn-block btn-facebook"
+								data-populate_uri=""
+								data-redirect_uri="https://zh.airbnb.com/authenticate?redirect_params[action]=show&amp;redirect_params[controller]=rooms&amp;redirect_params[fb_login]=1&amp;redirect_params[id]=1195448&amp;ref=fb_p3side">
+								<span class="icon-container"> <i
+									class="icon icon-facebook"></i>
+							</span> <span class="text-container"> 通过<strong>Facebook</strong><strong>登录</strong>
+							</span>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div id="social_connections" class="row-space-2"
+					style="display: none">
+					<div class="panel">
+						<div class="panel-header">您和Isabel</div>
+						<div class="panel-body panel-light secondary-panel-body">
+							<h6>
+								<a target="_blank" href="/social/"> 了解更多! </a>
+							</h6>
+						</div>
+						<ul id="social_connections_list"
+							class="panel-body panel-body-scroll">
+						</ul>
+						<a href="#" id="more-connections"
+							class="panel-body secondary-panel-body" style="display: none;">
+							<span id="more-count"></span> 更多的好友连接
+						</a>
+					</div>
+				</div>
+
+
+
+				<div id="similar_listings" class="row-space-2">
+					<div class="panel">
+						<div class="panel-header panel-header-scroll panel-dark">
+							类似房源</div>
+						<div class="related-listings panel-body loading">&nbsp;</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<jsp:include page="footer.jsp" />
+	
+
+	<div id="fb-root"></div>
+
+	<script src="scripts/jquery.min.js" type="text/javascript"></script>
+	<script src="scripts/flight.js"></script>
+	<script src="scripts/page3.js" type="text/javascript"></script>
+
+	<div id="lwlb_overlay"></div>
+	<div id="lwlb_contact_container"></div>
+
+</body>
+</html>

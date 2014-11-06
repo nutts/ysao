@@ -1469,9 +1469,12 @@ provide("map_search/Disaster",Disaster)
 		};
 		
 		this.loadBootstrapData=function(){
-			var urlParams=urlParams=$.query.load(window.location.href).keys,
-			bootstrapData=this.$node.data("bootstrapData"),
-			bootstrapFilter=function(param){
+			var urlParams=urlParams=$.query.load(window.location.href).keys;
+			var bootstrapData=this.$node.data("bootstrapData");
+			
+			console.debug(bootstrapData);
+			
+			var bootstrapFilter=function(param){
 				return bootstrapData[param]!==undefined
 			};
 			this.currentSearch={

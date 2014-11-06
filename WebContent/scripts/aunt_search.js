@@ -6,10 +6,18 @@
 		filtersSectionSelector:".filters-section",
 		filtersSelector:".filters",
 		checkinSelector:".checkin",
-		onBoardTimeSelector:"#onboardtime"
-
+		onBoardTimeSelector:"#onboardtime",
+		moreButtonSelector:".show-more",
+		FiltersMoreSelector:".filters-more",
+		keywordsSelector:"input[name=keywords]",
+		neighborhoodsSelector:".neighborhoods",
+		searchButtonSelector:".search-button",
+		checkboxGroupSelector:".checkbox-group",
+		neighborhoodsSelector: ".neighborhoods :checked"
 		
 	});
+	
+	var lastFilterData;
 	
 	this.initPriceSlider=function(){
 		console.debug("in function");
@@ -55,19 +63,43 @@
 	};
 	
 	this.toggleMoreFilters=function(e,data){
-		var $section=$(data.el).closest(this.attr.filtersSectionSelector);
-		$section.find(this.attr.moreFiltersSelector).toggleClass("hide");
-		$section.find(this.attr.moreButtonSelector).find("span").toggleClass("hide")
+		//var $section=$(data.el).closest(this.attr.filtersSectionSelector);
+		
+		//$section.find(this.attr.moreFiltersSelector).toggleClass("hide");
+		this.select("moreButtonSelector").find("span").toggleClass("hide")
+		this.select("FiltersMoreSelector").toggleClass("hide");
 	};
+	
+	this.resetFilter=function(e){
+			var $slider=this.select("priceRangeSliderSelector");
+			
+			$slider.slider("values",0,$slider.slider("option","min"));
+			$slider.slider("values",1,$slider.slider("option","max"));
+			
+			this.select("neighborhoodsSelector").prop("checked",false);
+			this.select("keywordsSelector").val("");
+			this.triggerFiltersChanged();
+	
+	};//end of resetFilter;
 	
 	this.processFilters=function(){
 		var filterData={},
 		checkin=this.select("checkinSelector").val(),
+		keywords=this.select("keywordsSelector").val(),
 		$slider = this.select('priceRangeSliderSelector');
 		
 		if(checkin){
 			filterData.checkin = checkin;
 		}
+		
+		if(keywords){
+			filterData.keywords = keywords;
+		}
+		
+		filterData.neighborhoods = this.select("neighborhoodsSelector").map(function(){
+			return this.getAttribute("value");
+		}).get().join();
+		
 		
 		filterData.minPrice = $slider.data("minPrice");
 		filterData.maxPrice = $slider.data("maxPrice");
@@ -77,20 +109,21 @@
 		return filterData;
 	};
 	
-	this.triggerFiltersChanged=function(e, data){
-		console.debug("trigger Filter changed function");
-		
-		var filterData=this.processFilters();
-		
-		console.debug("throw out event uiFiltersChanged");
-		console.debug(filterData);
-		this.trigger("uiFiltersChanged",{filterData:filterData});
-		
+	this.triggerFiltersChanged=function(e){
+		var filterData=this.processFilters(),
+			//filtersChanged=!_.isEqual(filterData,this.lastFilterData);
+			filtersChanged = true;
+		console.debug("trigger filters ...");
+		this.trigger("uiFiltersChanged",{filterData:filterData,changed:filtersChanged});
 		this.lastFilterData=filterData;
 	};
-	
 	//var checkinDatePicker = this.select("checkinSelector").datepicker();
 	
+	this.neighborhoodChanged= function(e){
+		console.debug("check box clicked");
+		this.select("neighborhoodsSelector").find("input").prop("checked",false);
+		//this.triggerFiltersChanged();
+	};
 
 	function availableDates(date){
 		if(date > new Date())
@@ -126,10 +159,13 @@
 		this.initPriceSlider();
 		this.initCheckin();
 		this.on("click", {
-			priceRangeSliderSelector: this.triggerFiltersChanged
+			priceRangeSliderSelector: this.triggerFiltersChanged,
+			moreButtonSelector:this.toggleMoreFilters,
+			searchButtonSelector:this.triggerFiltersChanged
 		});
 		this.on(document, "uiFiltersButtonClicked", this.openFiltersPanel);
 		this.on("#onboardtime", "change", this.triggerFiltersChanged);
+		this.on(document, "uiFilterReset", this.resetFilter);
 	
 		
 		
@@ -159,13 +195,13 @@
 		};
 		
 		this.updatePaginationButtons=function(event, data){
-			console.debug(data.pagination_html);
-			
 			$(".results-footer").replaceWith(data.pagination_html);
 			$(".pagination").find("a").each(function(){
+				console.debug("override the page button event");
 				var _this=$(this);
 				_this.click(function(e){
 					e.preventDefault();
+					console.debug("page button clicked" + _this.attr("target"));
 					var newPage=parseInt(_this.attr("target"),10);
 					_this.trigger("uiPageRequested",{page:newPage});
 					return false
@@ -178,6 +214,7 @@
 			this.on(".outer-listings-container", "dataSearchResultsLoading", this.setLoading);
 			this.on(".outer-listings-container", "dataSearchResultsLoaded", this.render);
 			this.on(document, "dataResultsLoaded", this.updatePaginationButtons);
+			
 			
 			
 		});
@@ -198,16 +235,12 @@
 		});
 		
 		this.filtersButtonClicked=function(){
-			console.debug(this.$node.html());
-			
-			this.$node.addClass("hide");
-			this.trigger(document, "uiFiltersButtonClicked")
+			this.trigger(document, "uiFilterReset");
 		};
 		
 		this.updateCountAndPagination=function(e,data){
 			console.debug(data.results_count_string);
 			this.select("resultsCountSelector").html(data.results_count_string);
-			//this.updatePaginationButtons(data);
 			//if(data.source==="initial"){this.restoreScrollPosition()}
 		};
 		
@@ -223,17 +256,29 @@
 	//the logic component;
 	var MapSearchData=flight.component(function(){
 		
-		this.SEARCH_PARAMS={filters:["checkin","checkout","guests","exp_types","empHost","room_types","price_min","price_max","min_bedrooms","min_bathrooms","min_beds","neighborhoods","languages","hosting_amenities","property_type_id","connected","keywords"],logging:["s_tag"],developer:["deb","inst","ops","exps","ib","collection_id","host_id","show_listing"]};
+		this.SEARCH_PARAMS={map:["sw_lat","sw_lng","ne_lat","ne_lng","search_by_map"],
+							header:["location"],
+							filters:["checkin","price_min","price_max","neighborhoods","keywords"],
+							logging:["s_tag"],
+							developer:["deb","inst","ops","exps","ib","collection_id","host_id","show_listing"]};
+		
 		this.defaultAttrs({
 			sTagRegex:/([\?&]s=)[0-9a-zA-Z_\-]+/g,
 			ListingsContainerSelector: ".listings-container"
 			});
+		
 		this.mergedParams=function(){
+//			console.debug(this.SEARCH_PARAMS.map);
 			var mapParams={};
-			for(var i=0;i<this.SEARCH_PARAMS.map.length;i++){
-				mapParams[this.SEARCH_PARAMS.map[i]]=this.currentSearch.map[this.SEARCH_PARAMS.map[i]]
-			}
-			return $.extend({page:this.currentSearch.page},mapParams,this.currentSearch.header,this.currentSearch.filters,this.currentSearch.logging,this.currentSearch.developer)
+//			for(var i=0;i<this.SEARCH_PARAMS.map.length;i++){
+//				mapParams[this.SEARCH_PARAMS.map[i]]=this.currentSearch.map[this.SEARCH_PARAMS.map[i]]
+//			}
+			return $.extend({page:this.currentSearch.page},
+							mapParams,
+							this.currentSearch.header,
+							this.currentSearch.filters,
+							this.currentSearch.logging,
+							this.currentSearch.developer)
 		};
 		
 		this.currentSearch = {source:"initial",page:"1"};
@@ -249,8 +294,33 @@
 			this.select('ListingsContainerSelector').html(data.results);
 		};
 		
+		this.getUrlParam = function(name){
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) return unescape(r[2]); return null;
+		}
+		
+		
+		//the page is the first load;
+		this.loadBootstrapData=function(){
+			console.debug(" load bootstrap data ...");
+			//var urlParams= $.query.load(window.location.href).keys,
+			
+			var chkin = this.getUrlParam("checkin");
+			var urlParams = $(location).attr('href').keys;
+			console.debug("parms " + urlParams);
+		
+			this.currentSearch={
+					page:1,source:"initial",map:{},header:{},filters:{checkin:chkin},logging:{},developer:{}
+			};
+			
+			
+			this.fetchResults();
+			
+		};
+			
+			
 		this.triggerResultsLoaded=function(data){
-			console.debug("trigger dataResultsLoaded");
 			this.trigger("dataResultsLoaded",{
 				//count:data.visible_results_count,
 				page:this.currentSearch.page,
@@ -261,9 +331,15 @@
 		
 		};
 		
-		this.fetchResults=function(params){
-			console.debug("start to fetch results...1111");
-			//var params = {page:1, name:"张三"};
+		this.fetchResults=function(){
+			console.debug("start to fetch results");
+			var params=this.mergedParams();
+			console.debug(params);
+			if(this.currentSearch.source!=="page"){
+				params.page=1;
+				this.currentSearch.page=1;
+				delete params.s_tag
+			}
 			
 			this.trigger("dataSearchResultsLoading",{currentSearch:this.currentSearch});
 			
@@ -271,6 +347,7 @@
 					this._activeRequest.abort()
 			}
 			
+			console.debug("the request parameters are ...");
 			console.debug(params);
 			
 			this._activeRequest=$.get("/ysao/Server",params,(function(data){		
@@ -281,13 +358,26 @@
 		}; 
 		
 		this.searchFromFilters=function(e,params){
-			console.debug("start to search ...");
+			console.debug("search from filters");
 			console.debug(params);
-			this.fetchResults(params);
+			if(params.changed){
+				this.currentSearch.filters=params.filterData;
+				this.currentSearch.source="filters";
+				this.fetchResults();
+			}
+		}
+		
+		this.updateFromPagination=function(e,data){
+			console.debug("page clicked");
+			this.currentSearch.page=data.page;
+			this.currentSearch.source="page";
+			this.fetchResults();
 		};
 		
 		this.after('initialize',function(){
+			this.loadBootstrapData();
 			this.on(document,"uiFiltersChanged",this.searchFromFilters);
+			this.on("uiPageRequested",this.updateFromPagination)
 			
 		});
 	});  //end of component MapSearchData;
@@ -298,7 +388,8 @@
     //provide("aunt_search/Filters", Filters);
 	SidebarHeader.attachTo(".sidebar-header");
 	MapSearchData.attachTo(document);
-	console.debug("sssssssssssss");
+	
+	
 	
 })();
 	
